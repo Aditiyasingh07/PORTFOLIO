@@ -1,0 +1,128 @@
+.loader {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: 650px;
+    aspect-ratio: 1;
+    color: whitesmoke;
+    display: grid;
+    -webkit-mask:radial-gradient(circle 5px,#0000 90%,#000);
+    animation: l3 1s infinite linear;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    grid-area: 1/1;
+    background: 
+      radial-gradient(farthest-side at bottom left, currentColor 94%,#0000) top left, 
+      radial-gradient(farthest-side at top right  , currentColor 94%,#0000) bottom right;
+    background-size: 63% 50%;
+    background-repeat: no-repeat;
+    -webkit-mask: 
+      radial-gradient(65% 110% at bottom left, #0000 94%,#000) top left, 
+      radial-gradient(65% 110% at top   right, #0000 94%,#000) bottom right;
+    -webkit-mask-size: 62% 50%;
+    -webkit-mask-repeat: no-repeat;
+  }
+  .loader:after {
+    transform: rotate(90deg);
+  }
+  @keyframes l3 { 
+    100%{transform: rotate(1turn)}
+  }
+
+  
+  /* btn css */
+
+  .Btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+  }
+  
+  .svgIcon {
+    fill: rgb(214, 178, 255);
+  }
+  
+  .icon2 {
+    width: 18px;
+    height: 5px;
+    border-bottom: 2px solid rgb(182, 143, 255);
+    border-left: 2px solid rgb(182, 143, 255);
+    border-right: 2px solid rgb(182, 143, 255);
+  }
+  
+  .tooltip {
+    position: absolute;
+    right: -105px;
+    opacity: 0;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .2s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+  }
+  
+  .tooltip::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: rgb(12, 12, 12);
+    background-size: 1000%;
+    background-position: center;
+    transform: rotate(45deg);
+    left: -5%;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .tooltip {
+    opacity: 1;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover {
+    background-color: rgb(150, 94, 255);
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .icon2 {
+    border-bottom: 2px solid rgb(235, 235, 235);
+    border-left: 2px solid rgb(235, 235, 235);
+    border-right: 2px solid rgb(235, 235, 235);
+  }
+  
+  .Btn:hover .svgIcon {
+    fill: rgb(255, 255, 255);
+    animation: slide-in-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+
+  

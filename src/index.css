@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+  }
+
+#root{
+    background-color: #1e1e1e;
+    /* background-image: url("./assets/cat-han-W_5Eakb1598-unsplash.jpg");
+    background-size: contain;
+    background-position: center; */
+}
+.first{
+    background-image: url('./assets/ind.png');
+    background-repeat: no-repeat;
+}
+.nav-items{
+    font-family: "Kanit", sans-serif;
+}
+.name{
+    font-family: "Titan One", sans-serif;
+}
+
+::-webkit-scrollbar{
+    width:5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #b0b0b0 ;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #1e1e1e;
+    border-radius: 100%;
+    background-clip: content-box;
+}

@@ -1,0 +1,42 @@
+
+/* src/GlassCard.css */
+.glass-card {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    /* -webkit-backdrop-filter: blur(10px); */
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .glass-card:hover {
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+    border-radius: 3px;
+  }
+  .glass-card-sub {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    /* -webkit-backdrop-filter: blur(10px); */
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  .glass-card-sub:hover {
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+  }
+
+  .social-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    /* -webkit-backdrop-filter: blur(10px); */
+    color: #fff;
+    transition: all 0.3s ease;
+  }
