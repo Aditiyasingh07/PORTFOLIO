@@ -7,7 +7,7 @@ html {
   }
 
 #root{
-    background-color: #1e1e1e;
+    background-color: #070707;
     /* background-image: url("./assets/cat-han-W_5Eakb1598-unsplash.jpg");
     background-size: contain;
     background-position: center; */
@@ -24,15 +24,15 @@ html {
 }
 
 ::-webkit-scrollbar{
-    width:5px;
+    width:15px;
 }
 
 ::-webkit-scrollbar-track{
-    background-color: #b0b0b0 ;
+    background-color: #1e1e1e ;
 }
 
 ::-webkit-scrollbar-thumb{
-    background: #1e1e1e;
-    border-radius: 100%;
+    background:  #b0b0b0;
+    border-radius: 10%;
     background-clip: content-box;
 }

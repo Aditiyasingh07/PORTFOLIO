@@ -1,6 +1,5 @@
-import { Tooltip } from "@material-tailwind/react";
 import React from "react";
-import { Link } from "react-router-dom";
+
 
 export const Boxone = ()=>{
     return(
@@ -13,12 +12,18 @@ export const Boxone = ()=>{
                 />
                 <p className="text-[#FAF9F6] ml-3 text-xl">Scrapwallah</p>
               </div>
-              <div className="text-white">
+              <div className="text-white md:text-xl text-sm text-justify">
                 ScrapWallah offers scrap recycling services vai a website.
                 Customers can book trained and verified agents to collect scrap
                 from their home or office.
               </div>
-              <div className=" flex py-1 justify-between px-7 mt-3 bg-[#b0b0b0] rounded-2xl">
+         </>
+    )
+}
+
+
+
+{/* <div className=" flex py-1 justify-between px-7 mt-3 bg-[#b0b0b0] rounded-2xl">
                 <Tooltip content="Host link" 
                 className="bg-[#1e1e1e]"
                 animate={{
@@ -39,7 +44,4 @@ export const Boxone = ()=>{
                 <img src="src\assets\icons\sourse.svg" alt="#sourceicon" width="20px" />
                 </Link>
                 </Tooltip>
-              </div>
-         </>
-    )
-}
+              </div> */}

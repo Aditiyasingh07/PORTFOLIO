@@ -7,7 +7,7 @@ export default withMT ({
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppin', 'sans-serif'],
+        sans: ['Hind', 'sans-serif'],
         serif: ['Roboto', 'serif'],
         pera: ['Oswald', 'serif'],
       },

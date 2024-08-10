@@ -1,40 +1,40 @@
 import React, { useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
-import {Tooltip} from "@material-tailwind/react"
-import gsap from "gsap"
-
+import { Tooltip } from "@material-tailwind/react";
+import gsap from "gsap";
 
 export const Navbar = () => {
+  const letterref = useRef(null);
 
-  const letterref = useRef(null)
-   
-  useEffect(()=>{
+  useEffect(() => {
     gsap.to(letterref.current, {
       rotationX: 360,
-      duration:2,
+      duration: 2,
       repeat: -1,
-      ease: "power1.inOut"
-    })
-  }, [])
+      ease: "power1.inOut",
+    });
+  }, []);
 
   return (
     <>
       <header className="flex sticky z-50 top-4">
-        <nav className="flex w-[80%] items-center h-14 bg-[#FAF9F6] m-auto text-white rounded-l-xl bg-opacity-40 shadow-[0_30px_50px_-10px_rgba(0,0,0,1.3)] px-5 ">
+        <nav className="flex w-[90%] items-center h-14 bg-[#FAF9F6] m-auto text-white rounded-l-xl bg-opacity-40 shadow-[0_30px_50px_-10px_rgba(0,0,0,1.3)] md:px-5 px-3 ">
           <div className="flex justify-between flex-wrap items-cente mx-auto max-w-screen-xl w-screen">
-            <Link className="flex items-center">
+            <div className="flex items-center">
               <img
                 src="src/assets/icons/mylogo.png"
                 alt="#logo"
-                className="h-[60px] bg-[#353935] p-1 rounded-3xl"
+                className=" md:h-[60px] h-[40px] bg-[#353935] p-1 rounded-3xl"
               />
-              <h1 className="text-4xl flex text-[#FAF9F6] font-bold ml-5" >Ad<div ref={letterref}>i</div></h1>
-            </Link>
+              <h1 className="md:text-4xl text-2xl flex text-[#FAF9F6] font-bold md:ml-5 ml-1">
+                Ad<div ref={letterref}>i</div>
+              </h1>
+            </div>
             <div
               className="hidden items-center w-full lg:flex lg:w-auto lg:order-1"
               id="mobile-menu-2"
             >
-              <ul className="nav-items flex font-sans mt-4 font-bold lg:flex-row lg:space-x-8 lg:mt-0">
+              <ul className="nav-items flex font-sans mt-4 font-semibold lg:flex-row lg:space-x-8 lg:mt-0">
                 <li>
                   <NavLink
                     to="/"
@@ -104,72 +104,83 @@ export const Navbar = () => {
               </ul>
             </div>
             <div className="social flex items-center">
-              <div className="flex bg-[#FAF9F6] rounded-l-2xl bg-opacity-80 ">
-              <Link className="flex items-center" to="https://github.com/Aditiyasingh07">
-              <Tooltip content="Github"
+              <div className="flex bg-[#FAF9F6] md:ml-0 ml-5 rounded-l-2xl bg-opacity-80 ">
+                <Link
+                  to="https://github.com/Aditiyasingh07"
+                >
+                  <Tooltip
+                    content="Github"
                     className="bg-[#f5f5f5] text-black"
                     animate={{
-                        mount: { scale: 1, y: 0 },
-                        unmount: { scale: 0, y: 25 },
-                        }}>
-              <img
-                src="src/assets/icons/github.png"
-                alt="#logo"
-                to="https://github.com/Aditiyasingh07"
-                style={{target: '_blank'}}
-                className="h-12 duration-700 p-1 blur-0 hover:blur-[1px]"
-              />
-              </Tooltip>
-            </Link>
-            <Link className="flex items-center" to="/">
-            <Tooltip content="Instagram"
+                      mount: { scale: 1, y: 0 },
+                      unmount: { scale: 0, y: 25 },
+                    }}
+                  >
+                    <img
+                      src="src/assets/icons/github.png"
+                      alt="#logo"
+                      to="https://github.com/Aditiyasingh07"
+                      style={{ target: "_blank" }}
+                      className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
+                    />
+                  </Tooltip>
+                </Link>
+                <Link className="flex items-center" to="/">
+                  <Tooltip
+                    content="Instagram"
                     className="bg-[linear-gradient(45deg,#f09433_0%,#e6683c_25%,#dc2743_50%,#cc2366_75%,#bc1888_100%)]"
                     animate={{
-                        mount: { scale: 1, y: 0 },
-                        unmount: { scale: 0, y: 25 },
-                        }}>
-              <img
-                src="src/assets/icons/instagram.png"
-                alt="#logo"
-                className="h-12 duration-700 p-1 blur-0 hover:blur-[1px]"
-              />
-              </Tooltip>
-            </Link>
-            <Link className="flex items-center" to="/">
-            <Tooltip content="Twitter X"
+                      mount: { scale: 1, y: 0 },
+                      unmount: { scale: 0, y: 25 },
+                    }}
+                  >
+                    <img
+                      src="src/assets/icons/instagram.png"
+                      alt="#logo"
+                      className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
+                    />
+                  </Tooltip>
+                </Link>
+                <Link className="flex items-center" to="/">
+                  <Tooltip
+                    content="Twitter X"
                     className="bg-[#000000]"
                     animate={{
-                        mount: { scale: 1, y: 0 },
-                        unmount: { scale: 0, y: 25 },
-                        }}>
-              <img
-                src="src/assets/icons/twitter.png"
-                alt="#logo"
-                className="h-12 duration-700 p-1 blur-0 hover:blur-[1px]"
-              />
-              </Tooltip>
-            </Link>
-            <Link className="flex items-center" to="/">
-            <Tooltip content="Linkedin"
+                      mount: { scale: 1, y: 0 },
+                      unmount: { scale: 0, y: 25 },
+                    }}
+                  >
+                    <img
+                      src="src/assets/icons/twitter.png"
+                      alt="#logo"
+                      className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
+                    />
+                  </Tooltip>
+                </Link>
+                <Link className="flex items-center" to="/">
+                  <Tooltip
+                    content="Linkedin"
                     className="bg-[#0077B5]"
                     animate={{
-                        mount: { scale: 1, y: 0 },
-                        unmount: { scale: 0, y: 25 },
-                        }}>
-              <img
-                src="src/assets/icons/Linkedin.png"
-                alt="#logo"
-                className="h-12 duration-700 p-1 blur-0 hover:blur-[1px]"
-              />
-              </Tooltip>
-            </Link>
+                      mount: { scale: 1, y: 0 },
+                      unmount: { scale: 0, y: 25 },
+                    }}
+                  >
+                    <img
+                      src="src/assets/icons/Linkedin.png"
+                      alt="#logo"
+                      className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
+                    />
+                  </Tooltip>
+                </Link>
               </div>
-          </div>
             </div>
+            <div className=" flex md:hidden m-auto w-8 h-8 md:ml-0 ml-9">
+              <img src="src\assets\icons\menu.png" alt="menuicon" />
+            </div>
+          </div>
         </nav>
       </header>
     </>
   );
 };
-
-

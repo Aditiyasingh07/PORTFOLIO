@@ -6,21 +6,21 @@ import "../Skills/Skill.css";
 export const Contact = () => {
   return (
     <>
-      <section className="h-screen flex mt-20">
-        <div className="w-1/2 flex drop-shadow-[30px_0px_10px_rgba(0,0,0,1)]">
+      <section className="md:h-screen h-full flex md:flex-row flex-col md:mt-20 mt-0">
+        <div className="md:w-1/2 w-full flex md:mt-0 mt-[-55px]  drop-shadow-[30px_0px_10px_rgba(0,0,0,1)]">
           <img
-            className="w-[500px] h-[500px] m-auto"
+            className="md:w-[500px] w-[200px] md:h-[500px] h-[200px] m-auto"
             src="src\assets\contact.png"
             alt=""
           />
         </div>
-        <div className=" w-1/2 flex items-center">
-          <div className="contact w-1/2">
+        <div className=" md:w-1/2 w-full flex items-center ">
+          <div className="contact md:w-1/2 w-[60%] md:mx-0 mx-5">
             <form action="https://formspree.io/f/xpwarpye" method="POST" >
               <div className="flex flex-col mt-10">
                 <label
                   htmlFor="Full name"
-                  className="text-center font-bold text-white mb-3"
+                  className="text-center md:text-xl text-sm font-bold text-white mb-3"
                 >
                   Full Name
                 </label>
@@ -29,13 +29,13 @@ export const Contact = () => {
                   name="Full name"
                   placeholder="Enter Your Name"
                   required
-                  className="h-10 border-none w-full pl-5 rounded-2xl bg-[#b0b0b0] placeholder:text-white mb-5 text-brown-50"
+                  className="h-10 w-full pl-5 placeholder:text-xs placeholder:text-blue-gray-800 rounded-2xl bg-[#b0b0b0] mb-5 text-[#070707]"
                 />
               </div>
               <div className="flex flex-col">
                 <label
                   htmlFor="email"
-                  className=" mb-3 text-center font-bold text-white"
+                  className=" mb-3 text-center font-bold md:text-xl text-sm text-[#070707]"
                 >
                   Email
                 </label>
@@ -44,13 +44,13 @@ export const Contact = () => {
                   placeholder="Enter Your Email"
                   required
                   name="email"
-                  className="h-10 border-none rounded-2xl pl-5 bg-[#b0b0b0] mb-5 text-brown-50 placeholder:text-white"
+                  className="h-10 outline-none rounded-2xl pl-5 bg-[#b0b0b0] mb-5 text-[#070707] placeholder:text-xs placeholder:text-blue-gray-800"
                 />
               </div>
               <div className="flex flex-col">
                 <label
                   htmlFor="phone no."
-                  className="text-center mb-3 font-bold text-white"
+                  className="text-center md:text-xl text-sm mb-3 font-bold text-[#070707]"
                 >
                   Contact No.
                 </label>
@@ -58,13 +58,13 @@ export const Contact = () => {
                   type="number"
                   placeholder="Enter Your contact no"
                   name="Phone no."
-                  className=" placeholder:text-white h-10 mb-5 border-none rounded-2xl pl-5 bg-[#b0b0b0] text-brown-50"
+                  className=" placeholder:text-xs placeholder:text-blue-gray-800 h-10 mb-5 outline-none rounded-2xl pl-5 bg-[#b0b0b0] text-[#070707]"
                 />
               </div>
               <div className="flex flex-col">
                 <label
                   htmlFor="message"
-                  className="text-center font-bold mb-3 text-white"
+                  className="text-center md:text-xl text-sm font-bold mb-3 text-white"
                 >
                   Message
                 </label>
@@ -75,22 +75,22 @@ export const Contact = () => {
                   rows="10"
                   required
                   placeholder="Enter Your Massage"
-                  className=" bg-[#b0b0b0] text-black rounded-2xl placeholder:text-white pl-5 pt-3"
+                  className=" bg-[#b0b0b0] text-[#070707] outline-none rounded-2xl placeholder:text-xs placeholder:text-blue-gray-800 pl-5 pt-3"
                 ></textarea>
               </div>
-              <div className=" mt-[-35px] ">
-                <div className="w-12 relative top-12 h-12 bg-blue-800 rounded-full"></div>
-                <div className="w-12 relative top-20 left-72 mt-[-45px] h-12 bg-yellow-800 rounded-full"></div>
+              <div className=" mt-5 relative ">
+                <div className="w-12 absolute h-12 bg-blue-800 rounded-full"></div>
+                <div className="w-12 absolute top-5 md:right-20 left-48 h-12 bg-yellow-800 rounded-full"></div>
                 <input
                   type="submit"
-                  value="send"
-                  className="glass-card-sub text-2xl rounded-xl w-full py-2"
+                  value="Send"
+                  className="glass-card-sub md:text-2xl text-xl rounded-xl w-full py-2"
                 />
               </div>
             </form>
           </div>
           <div className="social w-1/2 flex justify-center h-full items-center">
-            <div className="flex social-card rounded-3xl bg-[#FAF9F6] w-28 justify-center h-28 flex-wrap ">
+            <div className="flex social-card rounded-3xl bg-[#FAF9F6]  md:w-28 w-20 justify-center md:h-28 h-20 flex-wrap ">
               <Link
                 className="flex items-center"
                 to="https://github.com/Aditiyasingh07"
@@ -108,7 +108,7 @@ export const Contact = () => {
                     alt="#logo"
                     to="https://github.com/Aditiyasingh07"
                     style={{ target: "_blank" }}
-                    className="h-12 duration-700 p-1 blur-0 hover:blur-[1px]"
+                    className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
                   />
                 </Tooltip>
               </Link>
@@ -124,7 +124,7 @@ export const Contact = () => {
                   <img
                     src="src/assets/icons/instagram.png"
                     alt="#logo"
-                    className="h-12 duration-700 p-1 blur-0 hover:blur-[1px]"
+                    className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
                   />
                 </Tooltip>
               </Link>
@@ -140,7 +140,7 @@ export const Contact = () => {
                   <img
                     src="src/assets/icons/twitter.png"
                     alt="#logo"
-                    className="h-12 duration-700 p-1 blur-0 hover:blur-[1px]"
+                    className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
                   />
                 </Tooltip>
               </Link>
@@ -156,7 +156,7 @@ export const Contact = () => {
                   <img
                     src="src/assets/icons/Linkedin.png"
                     alt="#logo"
-                    className="h-12 duration-700 p-1 blur-0 hover:blur-[1px]"
+                    className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
                   />
                 </Tooltip>
               </Link>
