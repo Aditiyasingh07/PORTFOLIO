@@ -1,6 +1,7 @@
 {
-  "name": "portfolio01",
+  "name": "Portfolio",
   "private": true,
+  "homepage": "https://Aditiyasingh07.github.io",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
