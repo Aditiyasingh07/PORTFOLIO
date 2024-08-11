@@ -2,6 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Tooltip } from "@material-tailwind/react";
 import gsap from "gsap";
+import insta from "/src/assets/icons/instagram.png"
+import git from "/src/assets/icons/github.png"
+import link from "/src/assets/icons/linkedin.png"
+import x from "/src/assets/icons/twitter.png"
+import mylogo from "/src/assets/icons/mylogo.png"
 
 export const Navbar = () => {
   const letterref = useRef(null);
@@ -22,7 +27,7 @@ export const Navbar = () => {
           <div className="flex justify-between flex-wrap items-cente mx-auto max-w-screen-xl w-screen">
             <div className="flex items-center">
               <img
-                src="src/assets/icons/mylogo.png"
+                src="/src/assets/icons/mylogo.png"
                 alt="#logo"
                 className=" md:h-[60px] h-[40px] bg-[#353935] p-1 rounded-3xl"
               />
@@ -117,7 +122,7 @@ export const Navbar = () => {
                     }}
                   >
                     <img
-                      src="src/assets/icons/github.png"
+                      src={git}
                       alt="#logo"
                       to="https://github.com/Aditiyasingh07"
                       style={{ target: "_blank" }}
@@ -135,7 +140,7 @@ export const Navbar = () => {
                     }}
                   >
                     <img
-                      src="src/assets/icons/instagram.png"
+                      src={insta}
                       alt="#logo"
                       className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
                     />
@@ -151,7 +156,7 @@ export const Navbar = () => {
                     }}
                   >
                     <img
-                      src="src/assets/icons/twitter.png"
+                      src={x}
                       alt="#logo"
                       className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
                     />
@@ -167,7 +172,7 @@ export const Navbar = () => {
                     }}
                   >
                     <img
-                      src="src/assets/icons/Linkedin.png"
+                      src={link}
                       alt="#logo"
                       className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
                     />
