@@ -2,6 +2,11 @@ import React from "react";
 import { Tooltip } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import "../Skills/Skill.css";
+import contact from "/src/assets/contact.png"
+import insta from "/src/assets/icons/instagram.png"
+import git from "/src/assets/icons/github.png"
+import link from "/src/assets/icons/linkedin.png"
+import x from "/src/assets/icons/twitter.png"
 
 export const Contact = () => {
   return (
@@ -10,7 +15,7 @@ export const Contact = () => {
         <div className="md:w-1/2 w-full flex md:mt-0 mt-[-55px]  drop-shadow-[30px_0px_10px_rgba(0,0,0,1)]">
           <img
             className="md:w-[500px] w-[200px] md:h-[500px] h-[200px] m-auto"
-            src="src\assets\contact.png"
+            src={contact}
             alt=""
           />
         </div>
@@ -104,7 +109,7 @@ export const Contact = () => {
                   }}
                 >
                   <img
-                    src="src/assets/icons/github.png"
+                    src={git}
                     alt="#logo"
                     to="https://github.com/Aditiyasingh07"
                     style={{ target: "_blank" }}
@@ -122,7 +127,7 @@ export const Contact = () => {
                   }}
                 >
                   <img
-                    src="src/assets/icons/instagram.png"
+                    src={insta}
                     alt="#logo"
                     className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
                   />
@@ -138,7 +143,7 @@ export const Contact = () => {
                   }}
                 >
                   <img
-                    src="src/assets/icons/twitter.png"
+                    src={x}
                     alt="#logo"
                     className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
                   />
@@ -154,7 +159,7 @@ export const Contact = () => {
                   }}
                 >
                   <img
-                    src="src/assets/icons/Linkedin.png"
+                    src={link}
                     alt="#logo"
                     className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
                   />

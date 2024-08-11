@@ -1,13 +1,16 @@
 import React from "react";
 import { Tooltip } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import todo from "/src/assets/projects/todo.png"
+import host from "/src/assets/icons/host.png"
+import source from "/src/assets/icons/sourse.svg"
 
 export const Boxtwo = ()=>{
     return(
         <>
         <div className=" flex items-center mb-3">
                 <img
-                  src="src\assets\projects\todo.png"
+                  src={todo}
                   alt="#todologo"
                   width="30px"
                 />
@@ -26,7 +29,7 @@ export const Boxtwo = ()=>{
                     unmount: { scale: 0, y: 25 },
                     }}>
                 <Link to={"https://aditiyasingh07.github.io/Todo-React-Project/"} target="_blank">
-                  <img src="src\assets\icons\host.png" alt="#hosticon" width="35px" />
+                  <img src={host} alt="#hosticon" width="35px" />
                 </Link>
                 </Tooltip>
                 <Tooltip content="Source Code" 
@@ -36,7 +39,7 @@ export const Boxtwo = ()=>{
                     unmount: { scale: 0, y: 25 },
                     }}>
                 <Link to={"https://github.com/Aditiyasingh07/Todo-React-Project.git"} target="_blank">
-                <img src="src\assets\icons\sourse.svg" alt="#sourceicon" width="20px" />
+                <img src={source} alt="#sourceicon" width="20px" />
                 </Link>
                 </Tooltip>
               </div>

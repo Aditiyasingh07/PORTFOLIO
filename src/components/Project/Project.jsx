@@ -4,9 +4,11 @@ import gsap from "gsap";
 import { Tooltip } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Boxone } from "../proboxs/Boxone";
-import { Boxtwo } from "../proboxs/Boxtwo";
 import { Boxthree } from "../proboxs/Boxthree";
+import { Boxtwo } from "../proboxs/Boxtwo";
+import { Boxone } from "../proboxs/Boxone";
+import host from "/src/assets/icons/host.png"
+import source from "/src/assets/icons/sourse.svg"
 // import { Projectone } from "../Index/Index";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -50,6 +52,19 @@ export const Project = () => {
               ref={probox}
             >
               <Boxone />
+            </div>
+
+            <div
+              className="bg-[#353940] p-5 md:w-[48%] w-[100%] rounded-2xl hover:bg-[#AD6D00] duration-700"
+              ref={proboxone}
+            >
+              <Boxtwo />
+            </div>
+            <div
+              className="bg-[#353940] p-5 md:w-[48%] w-[100%] md:mt-0 mt-2 rounded-2xl duration-700 hover:bg-[#00008B] md:mb-0 mb-20 "
+              ref={proboxtwo}
+            >
+              <Boxthree />
               <div className=" flex py-1 justify-between px-7 mt-3 bg-[#b0b0b0] rounded-2xl">
                 <Tooltip
                   content="Host link"
@@ -66,7 +81,7 @@ export const Project = () => {
                     target="_blank"
                   >
                     <img
-                      src="src\assets\icons\host.png"
+                      src={host}
                       alt="#hosticon"
                       width="35px"
                     />
@@ -87,26 +102,13 @@ export const Project = () => {
                     target="_blank"
                   >
                     <img
-                      src="src\assets\icons\sourse.svg"
+                      src={source}
                       alt="#sourceicon"
                       width="20px"
                     />
                   </Link>
                 </Tooltip>
               </div>
-            </div>
-
-            <div
-              className="bg-[#353940] p-5 md:w-[48%] w-[100%] rounded-2xl hover:bg-[#AD6D00] duration-700"
-              ref={proboxone}
-            >
-              <Boxtwo />
-            </div>
-            <div
-              className="bg-[#353940] p-5 md:w-[48%] w-[100%] md:mt-0 mt-2 rounded-2xl duration-700 hover:bg-[#00008B] md:mb-0 mb-20 "
-              ref={proboxtwo}
-            >
-              <Boxthree />
             </div>
           </div>
         </div>

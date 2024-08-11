@@ -27,7 +27,7 @@ export const Navbar = () => {
           <div className="flex justify-between flex-wrap items-cente mx-auto max-w-screen-xl w-screen">
             <div className="flex items-center">
               <img
-                src="/src/assets/icons/mylogo.png"
+                src={mylogo}
                 alt="#logo"
                 className=" md:h-[60px] h-[40px] bg-[#353935] p-1 rounded-3xl"
               />

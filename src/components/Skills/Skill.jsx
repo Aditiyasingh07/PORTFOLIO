@@ -3,6 +3,32 @@ import { Tooltip } from "@material-tailwind/react";
 import { gsap } from "gsap";
 import "./Skill.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import skillogo from "/src/assets/skills/skill.png"
+import reactlogo from "/src/assets/skills/reactlogo.png"
+import gitlogo from "/src/assets/skills/git.png"
+import vscode from "/src/assets/skills/vscodelogo.png"
+import fontendlogo from "/src/assets/skills/frontend.png"
+import hostlogo from "/src/assets/skills/hosting.png"
+import weblogo from "/src/assets/skills/web.png"
+import toollogo from "/src/assets/skills/tool.png"
+import react from "/src/assets/skills/react.png"
+import tailwind from "/src/assets/skills/tailwind.png"
+import js from "/src/assets/skills/javascript.png"
+import html from "/src/assets/skills/html.png"
+import css from "/src/assets/skills/css.png"
+import redux from "/src/assets/skills/redux.png"
+import git from "/src/assets/skills/github.png"
+import vercel from "/src/assets/skills/vercel.svg"
+import blog from "/src/assets/projects/blog.png"
+import scrap from "/src/assets/projects/Scrap.svg"
+import todo from "/src/assets/projects/todo.png"
+import npm from "/src/assets/skills/npm.png"
+import vs from "/src/assets/skills/vscode.png"
+
+
+
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,7 +106,7 @@ export const Skill = () => {
           <div className="pl-7 md:flex hidden">
             <img
               className="drop-shadow-[30px_0px_10px_rgba(0,0,0,1)]"
-              src="src\assets\skills\skill.png"
+              src={skillogo}
               alt=""
               width="700px"
             />
@@ -95,7 +121,7 @@ export const Skill = () => {
               {/*  */}
               <div className=" absolute md:top-40 top-[-30px] right-5">
                   <img
-                    src="src\assets\skills\reactlogo.png"
+                    src={reactlogo}
                     alt=""
                     width="100px"
                     ref={logoone}
@@ -103,7 +129,7 @@ export const Skill = () => {
                 </div>
               <div className="z-10 glass-card-sub">
                 <img
-                  src="src\assets\skills\frontend.png"
+                  src={fontendlogo}
                   alt="#weblogo"
                   width="30px"
                 />
@@ -124,7 +150,7 @@ export const Skill = () => {
                     }}
                   >
                     <img
-                      src="src\assets\skills\react.png"
+                      src={react}
                       alt="#reactlogo"
                       width="30px"
                     />
@@ -138,7 +164,7 @@ export const Skill = () => {
                     }}
                   >
                     <img
-                      src="src\assets\skills\redux.png"
+                      src={redux}
                       alt="#reactlogo"
                       width="30px"
                     />
@@ -152,7 +178,7 @@ export const Skill = () => {
                     }}
                   >
                     <img
-                      src="src\assets\skills\tailwind.png"
+                      src={tailwind}
                       alt="#tailwindlogo"
                       width="30px"
                     />
@@ -166,7 +192,7 @@ export const Skill = () => {
                     }}
                   >
                     <img
-                      src="src\assets\skills\javascript.png"
+                      src={js}
                       alt="#javascriptlogo"
                       width="30px"
                     />
@@ -180,7 +206,7 @@ export const Skill = () => {
                     }}
                   >
                     <img
-                      src="src\assets\skills\html.png"
+                      src={html}
                       alt="#htmllogo"
                       width="30px"
                     />
@@ -194,7 +220,7 @@ export const Skill = () => {
                     }}
                   >
                     <img
-                      src="src\assets\skills\css.png"
+                      src={css}
                       alt="#csslogo"
                       width="30px"
                     />
@@ -208,11 +234,11 @@ export const Skill = () => {
               {/*  */}
               <div className=" absolute left-10 top-[-16px]">
               <img
-             src="src\assets\skills\git.png" alt="" width="100px" ref={logotwo} />
+             src={gitlogo} alt="" width="100px" ref={logotwo} />
               </div>
               <div className="glass-card-sub h-full"> 
               <img
-                src="src\assets\skills\hosting.png"
+                src={hostlogo}
                 alt="#weblogo"
                 width="30px"
               />
@@ -233,7 +259,7 @@ export const Skill = () => {
                   }}
                 >
                   <img
-                    src="src\assets\skills\github.png"
+                    src={git}
                     alt="#reactlogo"
                     width="30px"
                   />
@@ -247,7 +273,7 @@ export const Skill = () => {
                   }}
                 >
                   <img
-                    src="src\assets\skills\vercel.svg"
+                    src={vercel}
                     alt="#tailwindlogo"
                     width="30px"
                   />
@@ -263,7 +289,7 @@ export const Skill = () => {
                 </div>
               <div className=" glass-card-sub h-full">
               <img
-                src="src\assets\skills\web.png"
+                src={weblogo}
                 alt="#weblogo"
                 width="30px"
               />
@@ -284,22 +310,8 @@ export const Skill = () => {
                   }}
                 >
                   <img
-                    src="src\assets\projects\blog.png"
+                    src={blog}
                     alt="#reactlogo"
-                    width="30px"
-                  />
-                </Tooltip>
-                <Tooltip
-                  content="ToDo"
-                  className="bg-[#AD6D00]"
-                  animate={{
-                    mount: { scale: 1, y: 0 },
-                    unmount: { scale: 0, y: 25 },
-                  }}
-                >
-                  <img
-                    src="src\assets\projects\todo.png"
-                    alt="#tailwindlogo"
                     width="30px"
                   />
                 </Tooltip>
@@ -312,7 +324,21 @@ export const Skill = () => {
                   }}
                 >
                   <img
-                    src="src\assets\projects\Scrap.svg"
+                    src={scrap}
+                    alt="#tailwindlogo"
+                    width="30px"
+                  />
+                </Tooltip>
+                <Tooltip
+                  content="ToDo"
+                  className="bg-[#AD6D00]"
+                  animate={{
+                    mount: { scale: 1, y: 0 },
+                    unmount: { scale: 0, y: 25 },
+                  }}
+                >
+                  <img
+                    src={todo}
                     alt="#tailwindlogo"
                     width="30px"
                   />
@@ -326,11 +352,11 @@ export const Skill = () => {
               {/*  */}
               <div className=' absolute top-36 left-16 '>
               <img 
-                 src="src\assets\skills\vs code.png" alt="" width="100px" ref={logofour} />
+                 src={vscode} alt="" width="100px" ref={logofour} />
               </div>
               <div className="glass-card-sub">
               <img
-                src="src\assets\skills\tool.png"
+                src={toollogo}
                 alt="#weblogo"
                 width="30px"
               />
@@ -349,7 +375,7 @@ export const Skill = () => {
                   }}
                 >
                   <img
-                    src="src\assets\skills\vscode.png"
+                    src={vs}
                     alt="#reactlogo"
                     width="30px"
                   />
@@ -363,7 +389,7 @@ export const Skill = () => {
                   }}
                 >
                   <img
-                    src="src\assets\skills\npm.png"
+                    src={npm}
                     alt="#reactlogo"
                     width="30px"
                   />

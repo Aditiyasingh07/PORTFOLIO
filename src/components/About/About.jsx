@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef, useEffect } from "react";
 import {gsap} from "gsap"
+import ablogo from "/src/assets/about01.png"
 
 export const About = () => {
   const downloadFile = () => {
@@ -55,7 +56,7 @@ export const About = () => {
             <div className=" flex md:flex-row flex-col justify-between items-center relative">
             <img
                 className=" md:w-[200px] w-20 md:ml-80 ml-0 drop-shadow-[30px_0px_10px_rgba(0,0,0,0.25)]"
-                src="/src/assets/about01.png"
+                src={ablogo}
                 alt="#about"
               />
             <p className=" z-50 md:w-[60%] md:mb-0 mb-10 w-full md:mt-0 mt-4 md:text-[1.1rem] text-sm text-justify md:px-[50px] md:leading-[35px] leading-[20px] font-sans ali tracking-[3px] " ref={textani}>
