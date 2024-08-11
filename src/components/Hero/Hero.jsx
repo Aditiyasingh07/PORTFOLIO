@@ -1,6 +1,7 @@
 import React from "react";
 import "./hero.css";
 import { About, Skill, Project, Contact } from "../Index/Index";
+import naruto from "/src/assets/naruto.png"
 
 export const Hero = () => {
   return (
@@ -11,7 +12,7 @@ export const Hero = () => {
           <div className="loader"></div>
           <div className="sec md:flex-col flex-row-reverse md:w-1/2 w-full flex items-center md:mt-28 mt-[-60px] ">
             <div className=" w-[50%] md:mr-0 mr-5 drop-shadow-[30px_50px_10px_rgba(0,0,0,0.55)]">
-              <img src="src/assets/naruto.png" alt="#gif" />
+              <img src={naruto} alt="#gif" />
             </div>
             <div className="flex flex-col mt-7 justify-center text-center sub-first h-full text-[#FAF9F6]">
               <h1 className=" md:text-[2rem] text-[1rem]">
