@@ -7,6 +7,7 @@ import git from "/src/assets/icons/github.png"
 import link from "/src/assets/icons/linkedin.png"
 import x from "/src/assets/icons/twitter.png"
 import mylogo from "/src/assets/icons/mylogo.png"
+import menulogo from "/src/assets/icons/menu.png"
 
 export const Navbar = () => {
   const letterref = useRef(null);
@@ -181,7 +182,7 @@ export const Navbar = () => {
               </div>
             </div>
             <div className=" flex md:hidden m-auto w-8 h-8 md:ml-0 ml-9">
-              <img src="src\assets\icons\menu.png" alt="menuicon" />
+              <img src={menulogo} alt="menuicon" />
             </div>
           </div>
         </nav>
