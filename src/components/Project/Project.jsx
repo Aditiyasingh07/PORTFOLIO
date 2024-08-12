@@ -47,7 +47,7 @@ export const Project = () => {
       >
         <div className=" md:bg-[#b0b0b0] bg-transparent rounded-2xl md:w-[70%] w-[100%] h-full md:p-10 p-7 md:py-0 py-20 flex justify-center items-center">
           <div className=" flex md:w-[85%] gap-5 mt-[-60px] md:flex-wrap md:flex-row flex-col items-center justify-center ">
-          <p className=" md:hidden flex md:mb-0 mb-5 md:text-5xl text-3xl font-pera text-center text-[#FAF9F6] font-extrabold ">
+          <p className=" md:hidden flex md:mb-0 mb-2 md:text-5xl text-3xl font-pera text-center text-[#FAF9F6] font-extrabold ">
           Projects
         </p>
             <div
