@@ -24,9 +24,9 @@ export const Navbar = () => {
   return (
     <>
       <header className="flex sticky z-50 top-4">
-        <nav className="flex w-[90%] items-center h-14 bg-[#FAF9F6] m-auto text-white rounded-l-xl bg-opacity-40 shadow-[0_30px_50px_-10px_rgba(0,0,0,1.3)] md:px-5 px-3 ">
-          <div className="flex justify-between flex-wrap items-cente mx-auto max-w-screen-xl w-screen">
-            <div className="flex items-center">
+        <nav className="flex w-[90%] items-center h-14 bg-[#FAF9F6] m-auto text-white rounded-l-xl bg-opacity-40 shadow-[0_30px_50px_-10px_rgba(0,0,0,1.3)] md:px-5 px-1 ">
+          <div className="flex md:justify-evenly md:px-0 px-1 flex-wrap items-cente mx-auto max-w-screen-xl w-screen">
+            <div className="flex items-center ">
               <img
                 src={mylogo}
                 alt="#logo"
@@ -40,7 +40,7 @@ export const Navbar = () => {
               className="hidden items-center w-full lg:flex lg:w-auto lg:order-1"
               id="mobile-menu-2"
             >
-              <ul className="nav-items flex font-sans mt-4 font-semibold lg:flex-row lg:space-x-8 lg:mt-0">
+              <ul className="nav-items flex font-serif mt-4 font-semibold lg:flex-row lg:space-x-8 lg:mt-0">
                 <li>
                   <NavLink
                     to="/"
@@ -48,7 +48,7 @@ export const Navbar = () => {
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 border-b
                       ${
-                        isActive ? "text-[#353935]" : "text-[#FAF9F6]"
+                        isActive ? "text-[#070707]" : "text-[#FAF9F6]"
                       } border-gray-100 lg:hover:bg-transparent lg:border-0 lg:p-0 text-[1.2rem] hover:text-orange-700 `
                     }
                   >
@@ -61,7 +61,7 @@ export const Navbar = () => {
                     smooth={true}
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 border-b
-                      ${isActive ? "text-[#353935]" : "text-[#FAF9F6]"}
+                      ${isActive ? "text-[#070707]" : "text-[#FAF9F6]"}
                        border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 text-[1.2rem]`
                     }
                   >
@@ -74,7 +74,7 @@ export const Navbar = () => {
                     smooth={true}
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 border-b 
-                      ${isActive ? "text-[#353935]" : "text-[#FAF9F6]"}
+                      ${isActive ? "text-[#070707]" : "text-[#FAF9F6]"}
                       border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 text-[1.2rem]`
                     }
                   >
@@ -86,8 +86,8 @@ export const Navbar = () => {
                     to="/project"
                     smooth={true}
                     className={({ isActive }) =>
-                      `block py-2 pr-4 pl-3 duration-200 border-b 
-                      ${isActive ? "text-[#353935]" : "text-[#FAF9F6]"}
+                      `block py-2 pr-4 pl-3 duration-200 border-b
+                      ${isActive ? "text-[#070707]" : "text-[#FAF9F6]"}
                       border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 text-[1.2rem]`
                     }
                   >
@@ -109,14 +109,14 @@ export const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="social flex items-center">
-              <div className="flex bg-[#FAF9F6] md:ml-0 ml-5 rounded-l-2xl bg-opacity-80 ">
+            <div className="social flex md:ml-0 ml-3 items-center">
+              <div className="flex bg-[#FAF9F6] rounded-l-2xl bg-opacity-80 ">
                 <Link
                   to="https://github.com/Aditiyasingh07"
                 >
                   <Tooltip
                     content="Github"
-                    className="bg-[#f5f5f5] text-black"
+                    className="bg-[#f5f5f5] text-black font-pera"
                     animate={{
                       mount: { scale: 1, y: 0 },
                       unmount: { scale: 0, y: 25 },
@@ -131,10 +131,10 @@ export const Navbar = () => {
                     />
                   </Tooltip>
                 </Link>
-                <Link className="flex items-center" to="/">
+                <Link className="flex items-center" to="https://www.instagram.com/aditiyasingh73/">
                   <Tooltip
                     content="Instagram"
-                    className="bg-[linear-gradient(45deg,#f09433_0%,#e6683c_25%,#dc2743_50%,#cc2366_75%,#bc1888_100%)]"
+                    className="bg-[linear-gradient(45deg,#f09433_0%,#e6683c_25%,#dc2743_50%,#cc2366_75%,#bc1888_100%)] font-pera"
                     animate={{
                       mount: { scale: 1, y: 0 },
                       unmount: { scale: 0, y: 25 },
@@ -147,10 +147,10 @@ export const Navbar = () => {
                     />
                   </Tooltip>
                 </Link>
-                <Link className="flex items-center" to="/">
+                <Link className="flex items-center" to="https://x.com/Aditiya0singh?t=Nq9FHsDdWZm6mmLizfIPZQ&s=09">
                   <Tooltip
                     content="Twitter X"
-                    className="bg-[#000000]"
+                    className="font-pera bg-[#000000]"
                     animate={{
                       mount: { scale: 1, y: 0 },
                       unmount: { scale: 0, y: 25 },
@@ -163,10 +163,10 @@ export const Navbar = () => {
                     />
                   </Tooltip>
                 </Link>
-                <Link className="flex items-center" to="/">
+                <Link className="flex items-center" to="https://www.linkedin.com/in/aditiya-singh-581964316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                   <Tooltip
                     content="Linkedin"
-                    className="bg-[#0077B5]"
+                    className="bg-[#0077B5] font-pera"
                     animate={{
                       mount: { scale: 1, y: 0 },
                       unmount: { scale: 0, y: 25 },
@@ -181,7 +181,7 @@ export const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <div className=" flex md:hidden m-auto w-8 h-8 md:ml-0 ml-9">
+            <div className=" flex md:hidden m-auto w-5 h-5 ">
               <img src={menulogo} alt="menuicon" />
             </div>
           </div>

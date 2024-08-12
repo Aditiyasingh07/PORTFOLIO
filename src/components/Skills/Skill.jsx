@@ -25,11 +25,6 @@ import todo from "/src/assets/projects/todo.png"
 import npm from "/src/assets/skills/npm.png"
 import vs from "/src/assets/skills/vscode.png"
 
-
-
-
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 export const Skill = () => {
@@ -55,57 +50,57 @@ export const Skill = () => {
 
     tl.fromTo(
       skillone.current,
-      { opacity: 0, scale: 0.5, duration: 15 },
-      { opacity: 1, scale: 1, duration: 15 }
+      { opacity: 0, scale: 0.5 },
+      { opacity: 1, scale: 1 }
     );
     tl.fromTo(
       skilltwo.current,
-      { opacity: 0, scale: 0.5, duration: 15 },
-      { opacity: 1, scale: 1, duration: 15 }
+      { opacity: 0, scale: 0.5 },
+      { opacity: 1, scale: 1 }
     );
     tl.fromTo(
       skillthree.current,
-      { opacity: 0, x: -400, duration: 15 },
-      { opacity: 1, x: 0, duration: 15 }
+      { opacity: 0, x: -400 },
+      { opacity: 1, x: 0 }
     );
     tl.fromTo(
       skillfour.current,
-      { opacity: 0, scale: 0.5, duration: 15 },
-      { opacity: 1, scale: 1, duration: 15 }
+      { opacity: 0, scale: 0.5 },
+      { opacity: 1, scale: 1 }
     );
 
     tl.fromTo(
       logoone.current,
-      { opacity: 0, y: 500, duration: 15 },
-      { opacity: 1, y: 0, duration: 15 }
+      { opacity: 0, y: 500 },
+      { opacity: 1, y: 0 }
     );
     tl.fromTo(
       logotwo.current,
-      { opacity: 0, y: -500, duration: 15 },
-      { opacity: 1, y: 0, duration: 15 }
+      { opacity: 0, y: -500 },
+      { opacity: 1, y: 0 }
     );
     tl.fromTo(
       logothree.current,
-      { opacity: 0, y: -500, duration: 15 },
-      { opacity: 1, y: 0, duration: 15 }
+      { opacity: 0, y: -500 },
+      { opacity: 1, y: 0 }
     );
     tl.fromTo(
       logofour.current,
-      { opacity: 0, y: 500, duration: 15 },
-      { opacity: 1, y: 0, duration: 15 }
+      { opacity: 0, y: 500 },
+      { opacity: 1, y: 0 }
     );
   }, []);
 
   return (
     <>
-      <section className="h-full w-full mt-12 ">
-        <h1 className=" md:text-5xl text-3xl text-center mb-20 text-[#FAF9F6] font-extrabold">
+      <section className="h-screen w-full mt-12 " ref={skillsRef}>
+        <h1 className=" md:text-5xl text-3xl font-pera text-center mb-20 text-[#FAF9F6] font-extrabold">
           Skills
         </h1>
         <div className="flex items-center">
           <div className="pl-7 md:flex hidden">
             <img
-              className="drop-shadow-[30px_0px_10px_rgba(0,0,0,1)]"
+              className="drop-shadow-[30px_0px_10px_rgba(255,255,255,0.2)]"
               src={skillogo}
               alt=""
               width="700px"
@@ -113,7 +108,6 @@ export const Skill = () => {
           </div>
           <div
             className=" flex md:flex-row md:mt-0 mt-[-25px] md:px-0 px-7 flex-col flex-wrap gap-5 w-full justify-center"
-            ref={skillsRef}
           >
             <div className="md:w-1/3 w-full flex relative flex-col gap-y-2" 
             ref={skillone}
@@ -133,10 +127,10 @@ export const Skill = () => {
                   alt="#weblogo"
                   width="30px"
                 />
-                <h3 className="font-extrabold md:text-xl text-sm">
+                <h3 className="font-extrabold font-serif md:text-xl text-sm">
                   Front-end<br></br>Devloper
                 </h3>
-                <p className=" md:text-xl text-sm md:mt-0 mt-2">
+                <p className=" md:text-xl text-sm font-sans mt-2">
                   Optimized Hosting and deployment make websites accessible
                   online and operational.
                 </p>
@@ -242,10 +236,10 @@ export const Skill = () => {
                 alt="#weblogo"
                 width="30px"
               />
-              <h3 className=" font-extrabold md:text-xl text-sm">
+              <h3 className=" font-extrabold font-serif md:text-xl text-sm">
                 Hosting & <br></br> Deployement
               </h3>
-              <p className="md:text-xl text-sm mt-2">
+              <p className="md:text-xl font-sans text-sm mt-2">
                 Explore our web app: user-friendly, efficient, and feature-rich
                 solution.
               </p>
@@ -293,10 +287,10 @@ export const Skill = () => {
                 alt="#weblogo"
                 width="30px"
               />
-              <h3 className=" font-extrabold md:text-xl text-sm">
+              <h3 className=" font-extrabold font-serif md:text-xl text-sm">
                 Web <br></br> Applications
               </h3>
-              <p className="md:text-xl text-sm mt-3">
+              <p className="md:text-xl text-sm font-sans mt-3">
                 Explore our web app: user-friendly, efficient, and feature-rich
                 solution.
               </p>
@@ -360,8 +354,8 @@ export const Skill = () => {
                 alt="#weblogo"
                 width="30px"
               />
-              <h3 className=" font-extrabold md:text-xl text-sm">Web Tools</h3>
-              <p className="md:text-xl text-sm mt-3">
+              <h3 className=" font-extrabold md:text-xl font-serif text-sm">Web Tools</h3>
+              <p className="md:text-xl text-sm font-sans mt-3">
                 Web tools enhance productivity by streamlining tasks and
                 improving efficiency.
               </p>

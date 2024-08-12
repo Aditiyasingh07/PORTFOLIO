@@ -1,6 +1,7 @@
-import React from "react";
 import { Tooltip } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
 import "../Skills/Skill.css";
 import contact from "/src/assets/contact.png"
 import insta from "/src/assets/icons/instagram.png"
@@ -9,12 +10,34 @@ import link from "/src/assets/icons/linkedin.png"
 import x from "/src/assets/icons/twitter.png"
 
 export const Contact = () => {
+
+  const boxoneani = useRef(null)
+  const boxtwoani = useRef(null)
+
+  useEffect(()=>{
+    gsap.to(boxoneani.current, {
+      x: 30,
+      duration: 4,
+      repeat: -1,
+      yoyo: true,
+     })
+  }, [])
+
+  useEffect(()=>{
+    gsap.to(boxtwoani.current, {
+      x: -30,
+      duration: 4,
+      repeat: -1,
+      yoyo: true,
+     })
+  }, [])
+
   return (
     <>
       <section className="md:h-screen h-full flex md:flex-row flex-col md:mt-20 mt-0">
         <div className="md:w-1/2 w-full flex md:mt-0 mt-[-55px]  drop-shadow-[30px_0px_10px_rgba(0,0,0,1)]">
           <img
-            className="md:w-[500px] w-[200px] md:h-[500px] h-[200px] m-auto"
+            className="md:w-[500px] drop-shadow-[30px_0px_10px_rgba(255,255,255,0.1)] w-[200px] md:h-[500px] h-[200px] m-auto"
             src={contact}
             alt=""
           />
@@ -25,7 +48,7 @@ export const Contact = () => {
               <div className="flex flex-col mt-10">
                 <label
                   htmlFor="Full name"
-                  className="text-center md:text-xl text-sm font-bold text-white mb-3"
+                  className="text-center font-serif md:text-xl text-sm font-bold text-white mb-3"
                 >
                   Full Name
                 </label>
@@ -34,13 +57,13 @@ export const Contact = () => {
                   name="Full name"
                   placeholder="Enter Your Name"
                   required
-                  className="h-10 w-full pl-5 placeholder:text-xs placeholder:text-blue-gray-800 rounded-2xl bg-[#b0b0b0] mb-5 text-[#070707]"
+                  className="h-10 w-full pl-5 placeholder:text-xs placeholder:text-blue-gray-800 outline-none rounded-2xl bg-[#b0b0b0] mb-5 text-[#070707]"
                 />
               </div>
               <div className="flex flex-col">
                 <label
                   htmlFor="email"
-                  className=" mb-3 text-center font-bold md:text-xl text-sm text-[#070707]"
+                  className=" mb-3 text-center font-bold md:text-xl text-sm font-serif text-white"
                 >
                   Email
                 </label>
@@ -55,7 +78,7 @@ export const Contact = () => {
               <div className="flex flex-col">
                 <label
                   htmlFor="phone no."
-                  className="text-center md:text-xl text-sm mb-3 font-bold text-[#070707]"
+                  className="text-center md:text-xl text-sm mb-3 font-bold font-serif text-white"
                 >
                   Contact No.
                 </label>
@@ -69,7 +92,7 @@ export const Contact = () => {
               <div className="flex flex-col">
                 <label
                   htmlFor="message"
-                  className="text-center md:text-xl text-sm font-bold mb-3 text-white"
+                  className="text-center md:text-xl text-sm font-bold mb-3 font-serif text-white "
                 >
                   Message
                 </label>
@@ -84,12 +107,16 @@ export const Contact = () => {
                 ></textarea>
               </div>
               <div className=" mt-5 relative ">
-                <div className="w-12 absolute h-12 bg-blue-800 rounded-full"></div>
-                <div className="w-12 absolute top-5 md:right-20 left-48 h-12 bg-yellow-800 rounded-full"></div>
+                <div className="w-12 absolute h-12 bg-blue-800 rounded-full" 
+                ref={boxoneani}
+                ></div>
+                <div className="w-12 absolute top-5 md:right-[150px] left-[100px] h-12 bg-yellow-800 rounded-full" 
+                ref={boxtwoani}
+                ></div>
                 <input
                   type="submit"
                   value="Send"
-                  className="glass-card-sub md:text-2xl text-xl rounded-xl w-full py-2"
+                  className="glass-card-sub font-pera font-semibold md:text-3xl text-xl rounded-xl w-full py-2"
                 />
               </div>
             </form>
@@ -102,7 +129,7 @@ export const Contact = () => {
               >
                 <Tooltip
                   content="Github"
-                  className="bg-[#f5f5f5] text-black"
+                  className="bg-[#f5f5f5] text-black font-pera"
                   animate={{
                     mount: { scale: 1, y: 0 },
                     unmount: { scale: 0, y: 25 },
@@ -120,7 +147,7 @@ export const Contact = () => {
               <Link className="flex items-center" to="/">
                 <Tooltip
                   content="Instagram"
-                  className="bg-[linear-gradient(45deg,#f09433_0%,#e6683c_25%,#dc2743_50%,#cc2366_75%,#bc1888_100%)]"
+                  className="bg-[linear-gradient(45deg,#f09433_0%,#e6683c_25%,#dc2743_50%,#cc2366_75%,#bc1888_100%)] font-pera"
                   animate={{
                     mount: { scale: 1, y: 0 },
                     unmount: { scale: 0, y: 25 },
@@ -136,7 +163,7 @@ export const Contact = () => {
               <Link className="flex items-center" to="/">
                 <Tooltip
                   content="Twitter X"
-                  className="bg-[#000000]"
+                  className="font-pera bg-[#000000]"
                   animate={{
                     mount: { scale: 1, y: 0 },
                     unmount: { scale: 0, y: 25 },
@@ -152,7 +179,7 @@ export const Contact = () => {
               <Link className="flex items-center" to="/">
                 <Tooltip
                   content="Linkedin"
-                  className="bg-[#0077B5]"
+                  className="bg-[#0077B5] font-pera"
                   animate={{
                     mount: { scale: 1, y: 0 },
                     unmount: { scale: 0, y: 25 },

@@ -7,9 +7,9 @@ export default withMT ({
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Hind', 'sans-serif'],
-        serif: ['Roboto', 'serif'],
-        pera: ['Oswald', 'serif'],
+        sans: ['Ubuntu', 'sans-serif'],
+        serif: ['Mooli', 'serif'],
+        pera: ['Kalam', 'serif'],
       },
     },
   },

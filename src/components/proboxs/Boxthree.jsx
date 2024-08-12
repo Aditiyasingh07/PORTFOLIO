@@ -10,9 +10,9 @@ export const Boxthree = ()=>{
                   alt="#scraplogo"
                   width="30px"
                 />
-                <p className="text-[#FAF9F6] ml-3 text-xl">Scrapwallah</p>
+                <p className="text-[#FAF9F6] ml-3 font-semibold font-serif text-xl">Scrapwallah</p>
               </div>
-              <div className="text-white md:text-xl text-sm text-justify">
+              <div className="text-white md:text-xl text-sm font-sans text-justify">
                 ScrapWallah offers scrap recycling services vai a website.
                 Customers can book trained and verified agents to collect scrap
                 from their home or office.

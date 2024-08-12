@@ -11,16 +11,16 @@ export const Hero = () => {
           <div className=" md:w-1/2 w-full first bg-center md:bg-auto bg-cover mt-[-65px] md:h-auto h-28 [clip-path:polygon(0%_0%,80%_0%,100%_50%,90%_100%,0%_100%)]"></div>
           <div className="loader"></div>
           <div className="sec md:flex-col flex-row-reverse md:w-1/2 w-full flex items-center md:mt-28 mt-[-60px] ">
-            <div className=" w-[50%] md:mr-0 mr-5 drop-shadow-[30px_50px_10px_rgba(0,0,0,0.55)]">
+            <div className=" w-[50%] md:mr-0 mr-5 drop-shadow-[30px_0px_8px_rgba(255,255,255,0.1)]">
               <img src={naruto} alt="#gif" />
             </div>
-            <div className="flex flex-col mt-7 justify-center text-center sub-first h-full text-[#FAF9F6]">
+            <div className="flex font-pera flex-col mt-7 justify-center text-center sub-first h-full text-[#FAF9F6]">
               <h1 className=" md:text-[2rem] text-[1rem]">
                 Hello, I'm Aditiya Singh
               </h1>
-              <div className="dev flex justify-center">
-                <h1 className="name md:text-[4rem] text-[1.5rem] font-bold">
-                  Front-End Web Devloper
+              <div className=" flex justify-center">
+                <h1 className="md:text-[4rem] text-[1.5rem] font-bold">
+                  Front-End<br></br> Web Devloper
                 </h1>
               </div>
             </div>

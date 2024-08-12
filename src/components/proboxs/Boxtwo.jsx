@@ -14,9 +14,9 @@ export const Boxtwo = ()=>{
                   alt="#todologo"
                   width="30px"
                 />
-                <p className="text-[#FAF9F6] ml-3 text-xl ">To-do list</p>
+                <p className="text-[#FAF9F6] ml-3 font-semibold font-serif text-xl ">To-do list</p>
               </div>
-              <div className="text-white md:text-xl text-sm text-justify">
+              <div className="text-white md:text-xl font-sans text-sm text-justify">
                 A to-do list helps organize tasks, prioritize activities, track
                 progress, and ensure timely completion, enhancing productivity
                 and efficiency.

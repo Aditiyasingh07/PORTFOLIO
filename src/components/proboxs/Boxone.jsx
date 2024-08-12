@@ -15,9 +15,9 @@ export const Boxone = ()=>{
                   alt="#scraplogo"
                   width="30px"
                 />
-                <p className="text-[#FAF9F6] ml-3 text-xl">Blog</p>
+                <p className="text-[#FAF9F6] font-semibold font-serif ml-3 text-xl">Blog</p>
               </div>
-              <div className="text-white md:text-xl text-sm text-justify">
+              <div className="text-white font-sans md:text-xl text-sm text-justify">
                 Welcome to our blog, where we share insights, tips, and stories
                 to inspire and inform your daily life.
               </div>

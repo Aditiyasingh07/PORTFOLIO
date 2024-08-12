@@ -45,23 +45,26 @@ export const Project = () => {
         className=" flex justify-center md:mt-[250px] mt-32 md:h-screen items-center  [clip-path:polygon(0%_0%,95%_0%,100%_100%,50%_80%,0%_100%)]"
         ref={pros}
       >
-        <div className=" md:bg-[#b0b0b0] bg-transparent rounded-2xl md:w-[70%] w-[100%] md:mr-0 mr-12 md:ml-0 ml-5 h-full md:p-10 p-1 md:py-0 py-20 flex justify-center items-center">
+        <div className=" md:bg-[#b0b0b0] bg-transparent rounded-2xl md:w-[70%] w-[100%] h-full md:p-10 p-7 md:py-0 py-20 flex justify-center items-center">
           <div className=" flex md:w-[85%] gap-5 mt-[-60px] md:flex-wrap md:flex-row flex-col items-center justify-center ">
+          <p className=" md:hidden flex md:mb-0 mb-5 md:text-5xl text-3xl font-pera text-center text-[#FAF9F6] font-extrabold ">
+          Projects
+        </p>
             <div
-              className="bg-[#353940] md:w-[48%] w-[100%] p-5 rounded-2xl hover:bg-[#060651] duration-700"
+              className="bg-[#353940] md:w-[48%] md:h-1/2 h-1/2 w-[100%] p-5 rounded-2xl hover:bg-[#060651] duration-700"
               ref={probox}
             >
               <Boxone />
             </div>
 
             <div
-              className="bg-[#353940] p-5 md:w-[48%] w-[100%] rounded-2xl hover:bg-[#AD6D00] duration-700"
+              className="bg-[#353940] p-5 md:w-[48%] w-[100%] rounded-2xl hover:bg-[#7e4705] duration-700"
               ref={proboxone}
             >
               <Boxtwo />
             </div>
             <div
-              className="bg-[#353940] p-5 md:w-[48%] w-[100%] md:mt-0 mt-2 rounded-2xl duration-700 hover:bg-[#00008B] md:mb-0 mb-20 "
+              className="bg-[#353940] p-5 md:w-[48%] w-[100%] md:mt-0 mt-2 rounded-2xl duration-700 hover:bg-[#004a4b] md:mb-0 mb-20 "
               ref={proboxtwo}
             >
               <Boxthree />
@@ -112,7 +115,7 @@ export const Project = () => {
             </div>
           </div>
         </div>
-        <p className="md:text-5xl text-3xl text-center text-[#FAF9F6] font-extrabold rotate-90 absolute md:right-0 md:left-[1200px] left-[270px] ">
+        <p className="md:text-5xl text-3xl md:flex hidden text-center text-[#FAF9F6] font-extrabold md:rotate-90 absolute md:right-[-23px] font-pera ">
           Projects
         </p>
       </section>
