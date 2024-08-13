@@ -43,7 +43,7 @@ export const Contact = () => {
           />
         </div>
         <div className=" md:w-1/2 w-full flex items-center ">
-          <div className="contact md:w-1/2 w-[60%] md:mx-0 mx-5">
+          <div className="contact md:w-1/2 w-full md:mx-0 mx-5">
             <form action="https://formspree.io/f/xpwarpye" method="POST" >
               <div className="flex flex-col mt-10">
                 <label
@@ -57,7 +57,7 @@ export const Contact = () => {
                   name="Full name"
                   placeholder="Enter Your Name"
                   required
-                  className="h-10 w-full pl-5 placeholder:text-xs placeholder:text-blue-gray-800 outline-none rounded-2xl bg-[#b0b0b0] mb-5 text-[#070707]"
+                  className="md:h-10 h-8 w-full pl-5 placeholder:text-xs placeholder:text-blue-gray-800 outline-none md:rounded-2xl rounded-md bg-[#b0b0b0] mb-5 text-[#070707]"
                 />
               </div>
               <div className="flex flex-col">
@@ -72,7 +72,7 @@ export const Contact = () => {
                   placeholder="Enter Your Email"
                   required
                   name="email"
-                  className="h-10 outline-none rounded-2xl pl-5 bg-[#b0b0b0] mb-5 text-[#070707] placeholder:text-xs placeholder:text-blue-gray-800"
+                  className="md:h-10 h-8 outline-none md:rounded-2xl rounded-md pl-5 bg-[#b0b0b0] mb-5 text-[#070707] placeholder:text-xs placeholder:text-blue-gray-800"
                 />
               </div>
               <div className="flex flex-col">
@@ -86,7 +86,7 @@ export const Contact = () => {
                   type="number"
                   placeholder="Enter Your contact no"
                   name="Phone no."
-                  className=" placeholder:text-xs placeholder:text-blue-gray-800 h-10 mb-5 outline-none rounded-2xl pl-5 bg-[#b0b0b0] text-[#070707]"
+                  className=" placeholder:text-xs placeholder:text-blue-gray-800 md:h-10 h-8 mb-5 outline-none md:rounded-2xl rounded-md pl-5 bg-[#b0b0b0] text-[#070707]"
                 />
               </div>
               <div className="flex flex-col">
@@ -103,7 +103,7 @@ export const Contact = () => {
                   rows="10"
                   required
                   placeholder="Enter Your Massage"
-                  className=" bg-[#b0b0b0] text-[#070707] outline-none rounded-2xl placeholder:text-xs placeholder:text-blue-gray-800 pl-5 pt-3"
+                  className=" bg-[#b0b0b0] text-[#070707] outline-none md:rounded-2xl rounded-md placeholder:text-xs placeholder:text-blue-gray-800 pl-5 pt-3 md:h-full h-20"
                 ></textarea>
               </div>
               <div className=" mt-5 relative ">
@@ -116,19 +116,20 @@ export const Contact = () => {
                 <input
                   type="submit"
                   value="Send"
-                  className="glass-card-sub font-pera font-semibold md:text-3xl text-xl rounded-xl w-full py-2"
+                  className="glass-card-sub font-pera font-semibold md:text-3xl text-2xl rounded-xl w-full py-2"
                 />
               </div>
             </form>
           </div>
           <div className="social w-1/2 flex justify-center h-full items-center">
-            <div className="flex social-card rounded-3xl bg-[#FAF9F6]  md:w-28 w-20 justify-center md:h-28 h-20 flex-wrap ">
+            <div className="flex social-card rounded-3xl bg-[#FAF9F6]  md:w-28 w-9 justify-center md:h-28 h-30 flex-wrap ">
               <Link
                 className="flex items-center"
                 to="https://github.com/Aditiyasingh07"
               >
                 <Tooltip
                   content="Github"
+                  placement="right"
                   className="bg-[#f5f5f5] text-black font-pera"
                   animate={{
                     mount: { scale: 1, y: 0 },
@@ -147,6 +148,7 @@ export const Contact = () => {
               <Link className="flex items-center" to="/">
                 <Tooltip
                   content="Instagram"
+                  placement="right"
                   className="bg-[linear-gradient(45deg,#f09433_0%,#e6683c_25%,#dc2743_50%,#cc2366_75%,#bc1888_100%)] font-pera"
                   animate={{
                     mount: { scale: 1, y: 0 },
@@ -163,6 +165,7 @@ export const Contact = () => {
               <Link className="flex items-center" to="/">
                 <Tooltip
                   content="Twitter X"
+                  placement="right"
                   className="font-pera bg-[#000000]"
                   animate={{
                     mount: { scale: 1, y: 0 },
@@ -179,6 +182,7 @@ export const Contact = () => {
               <Link className="flex items-center" to="/">
                 <Tooltip
                   content="Linkedin"
+                  placement="right"
                   className="bg-[#0077B5] font-pera"
                   animate={{
                     mount: { scale: 1, y: 0 },

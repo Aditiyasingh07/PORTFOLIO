@@ -14,11 +14,11 @@ export const About = () => {
 
   return (
     <>
-      <section className="md:px-12 md:mt-24">
+      <section className="md:px-12 md:mt-24 mt-10">
         <div className="text-[#FAF9F6] flex pera justify-between z-10">
           <div className="flex flex-col relative items-center justify-between">
             <div className=" about-section-one">
-              <button onClick={downloadFile} className="Btn absolute md:right-[600px] right-32 md:top-0 top-10  ">
+              <button onClick={downloadFile} className="Btn absolute md:right-[600px] right-32 md:h-10 h-5 md:w-10 w-5 md:top-0 top-10  ">
                 <svg
                   className="svgIcon"
                   viewBox="0 0 384 512"

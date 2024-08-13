@@ -113,7 +113,7 @@ export const Skill = () => {
             ref={skillone}
             >
               {/*  */}
-              <div className=" absolute md:top-40 top-[-30px] right-5">
+              <div className=" absolute md:top-0 top-[-30px] right-5">
                   <img
                     src={reactlogo}
                     alt=""
@@ -131,8 +131,7 @@ export const Skill = () => {
                   Front-end<br></br>Devloper
                 </h3>
                 <p className=" md:text-xl text-sm font-sans mt-2">
-                  Optimized Hosting and deployment make websites accessible
-                  online and operational.
+                Front-end web development involves designing and building the user interface of websites using React js.
                 </p>
                 <div className="mt-3 flex md:w-[75%] w-[85%]  justify-around">
                   <Tooltip
@@ -226,7 +225,7 @@ export const Skill = () => {
             ref={skilltwo}
             >
               {/*  */}
-              <div className=" absolute left-10 top-[-16px]">
+              <div className=" absolute right-[-20px] top-[-16px]">
               <img
              src={gitlogo} alt="" width="100px" ref={logotwo} />
               </div>
@@ -240,8 +239,8 @@ export const Skill = () => {
                 Hosting & <br></br> Deployement
               </h3>
               <p className="md:text-xl font-sans text-sm mt-2">
-                Explore our web app: user-friendly, efficient, and feature-rich
-                solution.
+              Optimized Hosting and deployment make websites accessible
+              online and operational.
               </p>
               <div className="mt-3 flex md:w-1/6 w-[80px] justify-around ">
                 <Tooltip
@@ -279,7 +278,7 @@ export const Skill = () => {
             ref={skillthree}
             >
               {/*  */}
-              <div className=' h-20 w-20 top-20 right-32 rounded-full bg-yellow-800 absolute' ref={logothree}>
+              <div className=' h-20 w-20 top-[-15px] right-32 rounded-full bg-yellow-800 absolute' ref={logothree}>
                 </div>
               <div className=" glass-card-sub h-full">
               <img
@@ -291,8 +290,8 @@ export const Skill = () => {
                 Web <br></br> Applications
               </h3>
               <p className="md:text-xl text-sm font-sans mt-3">
-                Explore our web app: user-friendly, efficient, and feature-rich
-                solution.
+              Explore our web app: user-friendly, efficient, and feature-rich
+              solution.
               </p>
               <div className="mt-3 flex md:w-1/4 w-[110px] justify-around ">
                 <Tooltip
@@ -344,7 +343,7 @@ export const Skill = () => {
             ref={skillfour}
             >
               {/*  */}
-              <div className=' absolute top-36 left-16 '>
+              <div className=' absolute top-[160px] left-[210px] '>
               <img 
                  src={vscode} alt="" width="100px" ref={logofour} />
               </div>

@@ -9,8 +9,7 @@ export const Hero = () => {
       <div className=" h-full md:mt-[-58px] mt-14">
         <aside className="flex md:flex-row flex-col justify-between rounded-lg">
           <div className=" md:w-1/2 w-full first bg-center md:bg-auto bg-cover mt-[-65px] md:h-auto h-28 [clip-path:polygon(0%_0%,80%_0%,100%_50%,90%_100%,0%_100%)]"></div>
-          <div className="loader"></div>
-          <div className="sec md:flex-col flex-row-reverse md:w-1/2 w-full flex items-center md:mt-28 mt-[-60px] ">
+          <div className="sec md:flex-col flex-row-reverse md:w-1/2 w-full flex items-center md:mt-28 mt-5 ">
             <div className=" w-[50%] md:mr-0 mr-5 drop-shadow-[30px_0px_8px_rgba(255,255,255,0.1)]">
               <img src={naruto} alt="#gif" />
             </div>

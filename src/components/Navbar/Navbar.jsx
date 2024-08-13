@@ -113,6 +113,7 @@ export const Navbar = () => {
               <div className="flex bg-[#FAF9F6] rounded-l-2xl bg-opacity-80 ">
                 <Link
                   to="https://github.com/Aditiyasingh07"
+                  target="_blank"
                 >
                   <Tooltip
                     content="Github"
@@ -125,13 +126,11 @@ export const Navbar = () => {
                     <img
                       src={git}
                       alt="#logo"
-                      to="https://github.com/Aditiyasingh07"
-                      style={{ target: "_blank" }}
                       className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
                     />
                   </Tooltip>
                 </Link>
-                <Link className="flex items-center" to="https://www.instagram.com/aditiyasingh73/">
+                <Link className="flex items-center" to="https://www.instagram.com/aditiyasingh73/" target="_blank">
                   <Tooltip
                     content="Instagram"
                     className="bg-[linear-gradient(45deg,#f09433_0%,#e6683c_25%,#dc2743_50%,#cc2366_75%,#bc1888_100%)] font-pera"
@@ -147,7 +146,7 @@ export const Navbar = () => {
                     />
                   </Tooltip>
                 </Link>
-                <Link className="flex items-center" to="https://x.com/Aditiya0singh?t=Nq9FHsDdWZm6mmLizfIPZQ&s=09">
+                <Link className="flex items-center" to="https://x.com/Aditiya0singh?t=Nq9FHsDdWZm6mmLizfIPZQ&s=09" target="_blank">
                   <Tooltip
                     content="Twitter X"
                     className="font-pera bg-[#000000]"
@@ -163,7 +162,7 @@ export const Navbar = () => {
                     />
                   </Tooltip>
                 </Link>
-                <Link className="flex items-center" to="https://www.linkedin.com/in/aditiya-singh-581964316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                <Link className="flex items-center" to="https://www.linkedin.com/in/aditiya-singh-581964316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
                   <Tooltip
                     content="Linkedin"
                     className="bg-[#0077B5] font-pera"

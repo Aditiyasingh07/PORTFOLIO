@@ -8,9 +8,9 @@ export const Boxthree = ()=>{
                 <img
                   src={scrap}
                   alt="#scraplogo"
-                  width="30px"
+                  className="md:w-[30px] w-[23px]"
                 />
-                <p className="text-[#FAF9F6] ml-3 font-semibold font-serif text-xl">Scrapwallah</p>
+                <p className="text-[#FAF9F6] ml-3 font-semibold font-serif md:text-xl text-[1rem]">Scrapwallah</p>
               </div>
               <div className="text-white md:text-xl text-sm font-sans text-justify">
                 ScrapWallah offers scrap recycling services vai a website.

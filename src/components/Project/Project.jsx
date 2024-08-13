@@ -68,7 +68,7 @@ export const Project = () => {
               ref={proboxtwo}
             >
               <Boxthree />
-              <div className=" flex py-1 justify-between px-7 mt-3 bg-[#b0b0b0] rounded-2xl">
+              <div className=" flex py-1 justify-between px-7 mt-3 bg-[#b0b0b0] md:rounded-2xl rounded-md">
                 <Tooltip
                   content="Host link"
                   className="bg-[#1e1e1e]"
@@ -86,7 +86,7 @@ export const Project = () => {
                     <img
                       src={host}
                       alt="#hosticon"
-                      width="35px"
+                      className="md:w-[35px] w-[27px]"
                     />
                   </Link>
                 </Tooltip>
@@ -107,7 +107,7 @@ export const Project = () => {
                     <img
                       src={source}
                       alt="#sourceicon"
-                      width="20px"
+                      className="md:w-[20px] w-[17px]"
                     />
                   </Link>
                 </Tooltip>
