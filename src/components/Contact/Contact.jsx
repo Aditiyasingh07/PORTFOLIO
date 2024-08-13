@@ -43,7 +43,7 @@ export const Contact = () => {
           />
         </div>
         <div className=" md:w-1/2 w-full flex items-center ">
-          <div className="contact md:w-1/2 w-full md:mx-0 mx-5">
+          <div className="contact md:w-1/2 w-[80%] md:ml-0 ml-3">
             <form action="https://formspree.io/f/xpwarpye" method="POST" >
               <div className="flex flex-col mt-10">
                 <label
@@ -121,8 +121,8 @@ export const Contact = () => {
               </div>
             </form>
           </div>
-          <div className="social w-1/2 flex justify-center h-full items-center">
-            <div className="flex social-card rounded-3xl bg-[#FAF9F6]  md:w-28 w-9 justify-center md:h-28 h-30 flex-wrap ">
+          <div className="social md:w-1/2 w-9 md:ml-0 ml-3 flex justify-center h-full items-center">
+            <div className="flex social-card rounded-3xl bg-[#FAF9F6] justify-center flex-wrap ">
               <Link
                 className="flex items-center"
                 to="https://github.com/Aditiyasingh07"
