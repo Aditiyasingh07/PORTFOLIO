@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Tooltip } from "@material-tailwind/react";
 import gsap from "gsap";
@@ -8,8 +8,11 @@ import link from "/src/assets/icons/linkedin.png"
 import x from "/src/assets/icons/twitter.png"
 import mylogo from "/src/assets/icons/mylogo.png"
 import menulogo from "/src/assets/icons/menu.png"
+import close from "/src/assets/icons/close.svg"
 
 export const Navbar = () => {
+
+  const [openMenu, setOpenMenu] = useState(false);
   const letterref = useRef(null);
 
   useEffect(() => {
@@ -36,20 +39,29 @@ export const Navbar = () => {
                 Ad<div ref={letterref}>i</div>
               </h1>
             </div>
+            <div className=" ">
             <div
-              className="hidden items-center w-full lg:flex lg:w-auto lg:order-1"
+              className=" h-full items-center w-full flex "
               id="mobile-menu-2"
             >
-              <ul className="nav-items flex font-serif mt-4 font-semibold lg:flex-row lg:space-x-8 lg:mt-0">
+              <ul className={openMenu ? "font-serif absolute left-0 top-[-20px] text-center nav-items flex-row space-x-8 translate-x-0 h-screen pt-20 w-full bg-[#b0b0b0]" : " translate-x-full flex-col text-center absolute top-0 w-full left-0 h-screen "}>
+              {/* md:static nav-items flex font-serif md:mt-4 mt-[-17px] md:py-0 py-10 font-semibold md:flex-row md:space-x-8 md:w-full 
+              absolute top-0 left-0 md:translate-x-0 translate-x-full flex-col w-full text-center md:bg-transparent bg-[#b0b0b0] md:h-10 h-screen */}
+                <div 
+                onClick={()=>setOpenMenu(false)}
+                className=" md:hidden w-10 flex relative top-0 left-[250px]">
+                  <img src={close} alt=""
+                  className="w-10" />
+                </div>
                 <li>
                   <NavLink
                     to="/"
                     smooth={true}
                     className={({ isActive }) =>
-                      `block py-2 pr-4 pl-3 duration-200 border-b
+                      `block py-2 pr-4 pl-3 duration-200
                       ${
                         isActive ? "text-[#070707]" : "text-[#FAF9F6]"
-                      } border-gray-100 lg:hover:bg-transparent lg:border-0 lg:p-0 text-[1.2rem] hover:text-orange-700 `
+                      } md:hover:bg-transparent md:border-0 md:p-0 text-[1.2rem] md:hover:text-orange-700 hover:text-[#070707] `
                     }
                   >
                     Home
@@ -60,9 +72,9 @@ export const Navbar = () => {
                     to="/about"
                     smooth={true}
                     className={({ isActive }) =>
-                      `block py-2 pr-4 pl-3 duration-200 border-b
+                      `block py-2 pr-4 pl-3 duration-200
                       ${isActive ? "text-[#070707]" : "text-[#FAF9F6]"}
-                       border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 text-[1.2rem]`
+                       lg:hover:bg-transparent lg:border-0 md:hover:text-orange-700 hover:text-[#070707] lg:p-0 text-[1.2rem]`
                     }
                   >
                     About
@@ -73,9 +85,9 @@ export const Navbar = () => {
                     to="/skill"
                     smooth={true}
                     className={({ isActive }) =>
-                      `block py-2 pr-4 pl-3 duration-200 border-b 
+                      `block py-2 pr-4 pl-3 duration-200 
                       ${isActive ? "text-[#070707]" : "text-[#FAF9F6]"}
-                      border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 text-[1.2rem]`
+                       lg:hover:bg-transparent lg:border-0 md:hover:text-orange-700 hover:text-[#070707] lg:p-0 text-[1.2rem]`
                     }
                   >
                     Skill
@@ -86,9 +98,9 @@ export const Navbar = () => {
                     to="/project"
                     smooth={true}
                     className={({ isActive }) =>
-                      `block py-2 pr-4 pl-3 duration-200 border-b
+                      `block py-2 pr-4 pl-3 duration-200
                       ${isActive ? "text-[#070707]" : "text-[#FAF9F6]"}
-                      border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 text-[1.2rem]`
+                      lg:hover:bg-transparent lg:border-0 md:hover:text-orange-700 hover:text-[#070707] lg:p-0 text-[1.2rem]`
                     }
                   >
                     Project
@@ -99,15 +111,16 @@ export const Navbar = () => {
                     to="/contact"
                     smooth={true}
                     className={({ isActive }) =>
-                      `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50
+                      `block py-2 pr-4 pl-3 duration-200
                     ${isActive ? "text-[#353935]" : "text-[#FAF9F6]"}
-                     lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 text-[1.2rem]`
+                     lg:hover:bg-transparent lg:border-0 md:hover:text-orange-700 hover:text-[#070707] lg:p-0 text-[1.2rem]`
                     }
                   >
                     Contact
                   </NavLink>
                 </li>
               </ul>
+            </div>
             </div>
             <div className="social flex md:ml-0 ml-3 items-center">
               <div className="flex bg-[#FAF9F6] rounded-l-2xl bg-opacity-80 ">
@@ -180,7 +193,9 @@ export const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <div className=" flex md:hidden m-auto w-5 h-5 ">
+            <div 
+            onClick={()=>setOpenMenu(true)}
+            className=" flex md:hidden m-auto w-5 h-5 ">
               <img src={menulogo} alt="menuicon" />
             </div>
           </div>
