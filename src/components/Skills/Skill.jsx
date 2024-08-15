@@ -93,11 +93,11 @@ export const Skill = () => {
 
   return (
     <>
-      <section className=" md:h-screen h-full w-full mt-12 " ref={skillsRef}>
-        <h1 className=" md:text-5xl text-3xl font-pera text-center mb-20 text-[#FAF9F6] font-extrabold">
+      <section className=" md:h-screen h-screen w-full mt-20 " ref={skillsRef}>
+        <h1 className=" md:text-5xl text-3xl font-pera text-center text-[#FAF9F6] font-extrabold">
           Skills
         </h1>
-        <div className=" flex items-center">
+        <div className=" md:h-full bg-[#070707] h-screen flex items-center">
           <div className="pl-7 md:flex hidden">
             <img
               className="drop-shadow-[30px_0px_10px_rgba(255,255,255,0.2)]"
@@ -107,7 +107,7 @@ export const Skill = () => {
             />
           </div>
           <div
-            className=" flex md:flex-row md:mt-0 mt-[-25px] md:px-0 px-7 flex-col flex-wrap md:gap-5 gap-0 w-full justify-center"
+            className=" flex md:flex-row md:mt-0 md:bg-transparent bg-[#070707] mt-[400px] md:px-0 px-7 flex-col flex-wrap md:gap-5 gap-0 w-full justify-center"
           >
             <div className="md:w-1/3 w-full md:mb-0 mb-5 flex relative flex-col gap-y-2" 
             ref={skillone}
@@ -343,7 +343,7 @@ export const Skill = () => {
             ref={skillfour}
             >
               {/*  */}
-              <div className=' absolute md:top-[160px] top-32 md:left-[210px] left-36 '>
+              <div className=' absolute md:top-[160px] top-[-20px] md:left-[210px] left-36 '>
               <img 
                  src={vscode} alt="" width="100px" ref={logofour} />
               </div>

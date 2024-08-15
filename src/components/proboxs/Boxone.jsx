@@ -8,7 +8,7 @@ import source from "/src/assets/icons/sourse.svg"
 export const Boxone = ()=>{
     return(
         <>
-        <div className=" md:h-[207px] h-full">
+        <div className=" hover:scale-105 duration-500 h-full">
         <div className="flex items-center mb-3">
                 <img
                   src={blog}
@@ -43,6 +43,9 @@ export const Boxone = ()=>{
                 </Link>
                 </Tooltip>
               </div>
+              <span>&nbsp;</span>
+              <span>&nbsp;</span>
+              <span>&nbsp;</span>
         </div>
         </>
     )

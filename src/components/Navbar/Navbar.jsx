@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Tooltip } from "@material-tailwind/react";
 import gsap from "gsap";
@@ -7,12 +7,11 @@ import git from "/src/assets/icons/github.png"
 import link from "/src/assets/icons/linkedin.png"
 import x from "/src/assets/icons/twitter.png"
 import mylogo from "/src/assets/icons/mylogo.png"
-import menulogo from "/src/assets/icons/menu.png"
+import cloud from "/src/assets/icons/cloud.png"
 import close from "/src/assets/icons/close.svg"
 
 export const Navbar = () => {
 
-  const [openMenu, setOpenMenu] = useState(false);
   const letterref = useRef(null);
 
   useEffect(() => {
@@ -44,15 +43,9 @@ export const Navbar = () => {
               className=" h-full items-center w-full flex "
               id="mobile-menu-2"
             >
-              <ul className={openMenu ? "font-serif absolute left-0 top-[-20px] text-center nav-items flex-row space-x-8 translate-x-0 h-screen pt-20 w-full bg-[#b0b0b0]" : " translate-x-full flex-col text-center absolute top-0 w-full left-0 h-screen "}>
-              {/* md:static nav-items flex font-serif md:mt-4 mt-[-17px] md:py-0 py-10 font-semibold md:flex-row md:space-x-8 md:w-full 
-              absolute top-0 left-0 md:translate-x-0 translate-x-full flex-col w-full text-center md:bg-transparent bg-[#b0b0b0] md:h-10 h-screen */}
-                <div 
-                onClick={()=>setOpenMenu(false)}
-                className=" md:hidden w-10 flex relative top-0 left-[250px]">
-                  <img src={close} alt=""
-                  className="w-10" />
-                </div>
+              <ul className= "md:static nav-items flex font-serif md:mt-4 mt-[-17px] md:py-0 py-10 font-semibold md:flex-row md:space-x-8 md:w-full absolute top-0 left-0 md:translate-x-0 translate-x-full flex-col w-full text-center md:bg-transparent bg-[#b0b0b0] md:h-10 h-screen ">
+
+              {/* {openMenu ? "font-serif fixed left-0 top-0 font-semibold text-center flex-row translate-x-0 h-[100%] pt-20 w-full bg-[#b0b0b0]" : " translate-x-full font-serif flex flex-col absolute right-0 top-0 text-center w-1/2 font-semibold h-13 md:static md:flex-row md:translate-x-0 md:w-[400px] md:justify-between "} */}
                 <li>
                   <NavLink
                     to="/"
@@ -139,7 +132,7 @@ export const Navbar = () => {
                     <img
                       src={git}
                       alt="#logo"
-                      className="md:h-12 h-8 duration-700 p-1 blur-0 hover:blur-[1px]"
+                      className="md:h-12 h-8 duration-700 p-1 blur-0 hover:scale-50"
                     />
                   </Tooltip>
                 </Link>
@@ -193,11 +186,12 @@ export const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <div 
-            onClick={()=>setOpenMenu(true)}
-            className=" flex md:hidden m-auto w-5 h-5 ">
-              <img src={menulogo} alt="menuicon" />
-            </div>
+            <Link 
+            to={"https://github.com/Aditiyasingh07/PORTFOLIO.git"}
+            target="_blank"
+            className=" flex md:hidden m-auto w-7 h-7 ">
+              <img src={cloud} alt="cloudicon" />
+            </Link>
           </div>
         </nav>
       </header>
