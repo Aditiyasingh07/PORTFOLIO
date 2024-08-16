@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import ablogo from "/src/assets/about01.png"
+import spring from "/src/assets/icons/spring.png"
+import gsap from "gsap";
 
 export const About = () => {
+
+  const springref = useRef(null)
+
+  useEffect(()=>{
+    gsap.to(springref.current, {
+      rotate: -120,
+      duration: 4,
+      repeatDelay: 3,
+      repeat: -1,
+      yoyo: true,
+    })
+  }, [])
+
+
   const downloadFile = () => {
     const link = document.createElement("a");
     link.href = "/Adi.pdf";
@@ -38,21 +54,24 @@ export const About = () => {
                 alt="#about"
               />
             <p className=" md:z-50 z-0 md:w-[60%] md:mb-0 mb-10 w-full md:mt-0 mt-4 md:text-[1.2rem] text-xs text-justify md:px-[50px] px-5 md:leading-[35px] leading-[20px] font-serif tracking-[3px] " >
-              I am a Front End{" "}
-              <span className=" font-bold text-[#ffffff]">Web Developer</span>{" "}
+              I am a {" "}
+              <span className=" font-bold text-[#fffce1]"> Front End Web Developer</span>{" "}
               and dedicated to crafting engaging and intuitive digital
               experiences. excel at transforming the new design concepts into
-              polished and functional websites. I stay updated with latest
-              designs, UI trends, technological developments, allowing me to
+              polished and functional websites. I stay updated with <span className=" font-bold text-[#fffce1]">latest
+              designs</span>, UI trends, technological developments, allowing me to
               design UIs that the perfectly fit user's project requirements with
               the latest and best design practices.I build functional, beautiful
-              and the user- frendly designs. My commitment to ensuring clients
+              and the <span className=" font-bold text-[#fffce1]">user- frendly designs</span>. My commitment to ensuring clients
               receive the best results drives me to deliver excellence in every
               project. Let's collaborate to bring your web development projects
-              to fruition with precision and creativity.
+              to fruition with precision and <span className=" font-bold text-[#fffce1]">creativity</span>.
             </p>
             <div className=" md:flex hidden bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-900 opacity-70 md:h-1/2 md:w-[60%] w-[100%] h-1/2 absolute [clip-path:polygon(50%_50%,100%_0%,100%_100%,0%_50%,0%_100%)] md:bottom-[200px] bottom-10 right-0 z-0 blur-3xl"></div>
             </div>
+          </div>
+          <div ref={springref} className=" absolute md:w-20 w-5 md:right-0 right-7" >
+            <img src={spring} alt="springlogo"  />
           </div>
         </div>
       </section>

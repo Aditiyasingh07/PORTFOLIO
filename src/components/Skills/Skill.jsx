@@ -94,7 +94,7 @@ export const Skill = () => {
   return (
     <>
       <section className=" md:h-screen h-screen w-full mt-20 " ref={skillsRef}>
-        <h1 className=" md:text-5xl text-3xl font-pera text-center text-[#FAF9F6] font-extrabold">
+        <h1 className=" md:text-5xl text-3xl font-pera text-center text-white font-extrabold">
           Skills
         </h1>
         <div className=" md:h-full bg-[#070707] h-screen flex items-center">
@@ -133,7 +133,7 @@ export const Skill = () => {
                 <p className=" md:text-xl text-sm font-sans mt-2">
                 Front-end web development involves designing and building the user interface of websites using React js.
                 </p>
-                <div className="mt-3 flex md:w-[75%] w-[85%]  justify-around">
+                <div className="mt-3 flex md:w-[75%] w-[95%]  justify-around">
                   <Tooltip
                     content="Reactjs"
                     className="bg-[#00d8ff]"
@@ -358,7 +358,7 @@ export const Skill = () => {
                 Web tools enhance productivity by streamlining tasks and
                 improving efficiency.
               </p>
-              <div className="mt-3 flex w-1/3 justify-evenly">
+              <div className="mt-3 flex md:w-1/3 w-24 justify-evenly">
                 <Tooltip
                   content="vs code"
                   className="bg-[#0078d7]"

@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./hero.css";
+import gsap from "gsap";
 import { About, Skill, Project, Contact } from "../Index/Index";
 import naruto from "/src/assets/naruto.png"
+import fan from "/src/assets/icons/fan.svg"
 
 export const Hero = () => {
+
+  const fanref = useRef(null)
+
+  useEffect(()=>{
+    gsap.to(fanref.current, {
+      rotate: 360,
+      duration: 2,
+      repeatDelay: 2,
+      repeat: -1,
+      ease: "power1.inOut",
+      // yoyo: true
+    })
+  }, [])
+
+
   return (
     <>
       <div className=" h-full md:mt-[-58px] mt-14">
@@ -14,9 +31,14 @@ export const Hero = () => {
               <img src={naruto} alt="#gif" />
             </div>
             <div className="flex font-pera flex-col mt-7 justify-center text-center sub-first h-full text-[#FAF9F6]">
-              <h1 className=" md:text-[2rem] text-[1rem]">
+              <div className=" flex justify-between md:ml-0 ml-3 items-center md:w-[103%]">
+              <h1 className=" md:ml-20 md:text-[2rem] text-[1rem]">
                 Hello, I'm Aditiya Singh
               </h1>
+              <div ref={fanref} className="w-8">
+                <img src={fan} alt="fanicon" />
+              </div>
+              </div>
               <div className=" flex justify-center">
                 <h1 className="md:text-[4rem] text-[1.5rem] font-bold">
                   Front-End<br></br> Web Devloper
