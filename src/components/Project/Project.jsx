@@ -42,12 +42,12 @@ export const Project = () => {
   return (
     <>
       <section
-        className=" flex justify-center md:mt-[200px] mt-[520px] md:h-screen items-center  [clip-path:polygon(0%_0%,95%_0%,100%_100%,50%_80%,0%_100%)]"
+        className=" flex justify-center md:mt-[200px] mt-[250px] md:h-screen items-center  [clip-path:polygon(0%_0%,95%_0%,100%_100%,50%_80%,0%_100%)]"
         ref={pros}
       >
         <div className=" md:bg-[#b0b0b0] bg-transparent rounded-2xl md:w-[70%] w-[100%] h-full md:p-10 p-7 md:py-0 py-20 flex justify-center items-center">
           <div className=" flex md:w-[85%] md:gap-5 gap-0 mt-[-60px] md:flex-wrap md:flex-row flex-col items-center justify-center ">
-          <p className=" md:hidden flex md:mb-0 mb-5 md:mt-0 mt-36 md:text-5xl text-3xl font-pera text-center text-[#FAF9F6] font-extrabold ">
+          <p className=" md:hidden flex md:mb-0 mb-5 md:text-5xl text-3xl font-pera text-center text-[#FAF9F6] font-extrabold ">
           Projects
         </p>
             <div
@@ -66,7 +66,7 @@ export const Project = () => {
               </div>
             </div>
             <div
-              className="bg-[#353940] md:p-8 p-5 md:w-[48%] w-[100%]  rounded-2xl duration-700 md:mb-0 mb-24 hover:bg-[#004a4b] md:mt-0 mt-4 "
+              className="bg-[#353940] md:p-8 p-5 md:w-[48%] w-[100%]  rounded-2xl duration-700 md:mb-0 mb-20 hover:bg-[#004a4b] md:mt-0 mt-4 "
               ref={proboxtwo}
             >
               <div className=" hover:scale-105 duration-500">
