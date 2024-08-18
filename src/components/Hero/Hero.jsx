@@ -13,6 +13,7 @@ export const Hero = () => {
     gsap.to(fanref.current, {
       rotate: 360,
       duration: 2,
+      delay:1,
       repeatDelay: 2,
       repeat: -1,
       ease: "power1.inOut",
@@ -35,7 +36,7 @@ export const Hero = () => {
               <h1 className=" md:ml-20 md:text-[2rem] text-[1rem]">
                 Hello, I'm Aditiya Singh
               </h1>
-              <div ref={fanref} className="w-8">
+              <div ref={fanref} className="md:w-16 w-8">
                 <img src={fan} alt="fanicon" />
               </div>
               </div>

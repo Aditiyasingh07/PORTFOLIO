@@ -93,8 +93,8 @@ export const Skill = () => {
 
   return (
     <>
-      <section className=" md:h-screen h-screen w-full mt-20 " ref={skillsRef}>
-        <h1 className=" md:text-5xl text-3xl font-pera text-center text-white font-extrabold">
+      <section className=" md:h-screen h-screen w-full md:mt-20 mt-10 " ref={skillsRef}>
+        <h1 className=" md:text-5xl text-3xl font-pera text-center md:mb-0 mb-20 text-white font-extrabold">
           Skills
         </h1>
         <div className=" md:h-full bg-[#070707] h-screen flex items-center">

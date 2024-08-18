@@ -6,7 +6,7 @@
     height: 50px; */
     border: none;
     border-radius: 50%;
-    background-color: rgb(27, 27, 27);
+    background-color: #1b1b1b;
     display: flex;
     flex-direction: column;
     align-items: center;

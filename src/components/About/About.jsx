@@ -2,10 +2,33 @@ import React, { useRef, useEffect } from "react";
 import ablogo from "/src/assets/about01.png"
 import spring from "/src/assets/icons/spring.png"
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const About = () => {
 
   const springref = useRef(null)
+  const aboutref = useRef(null)
+  const aboutbox = useRef(null)
+
+  useEffect(()=>{
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: aboutref.current,
+        start: "top 80%",
+        end: "top 30%",
+        scrub: true,
+      }
+    })
+
+  tl.fromTo(
+    aboutbox.current, 
+    { opacity: 0, scale: 0.1 },
+    { opacity: 1, scale: 1 }
+  )
+}, [])
+
 
   useEffect(()=>{
     gsap.to(springref.current, {
@@ -34,7 +57,7 @@ export const About = () => {
         <div className="text-[#FAF9F6] flex pera justify-between z-10">
           <div className="flex flex-col relative items-center justify-between">
             <div className=" about-section-one">
-              <button onClick={downloadFile} className="Btn absolute md:right-[600px] right-32 md:h-10 h-5 md:w-10 w-5 md:top-0 top-10  ">
+              <button onClick={downloadFile} className="Btn absolute md:right-[600px] md:bg-[#1b1b1b] bg-[#070707] right-32 md:h-10 h-8 md:w-10 w-8 md:top-0 top-10  ">
                 <svg
                   className="svgIcon"
                   viewBox="0 0 384 512"
@@ -53,7 +76,7 @@ export const About = () => {
                 src={ablogo}
                 alt="#about"
               />
-            <p className=" md:z-50 z-0 md:w-[60%] md:mb-0 mb-10 w-full md:mt-0 mt-4 md:text-[1.2rem] text-xs text-justify md:px-[50px] px-5 md:leading-[35px] leading-[20px] font-serif tracking-[3px] " >
+            <p className=" md:z-50 z-0 md:w-[60%] md:mb-0 mb-10 w-full md:mt-0 mt-4 md:text-[1.2rem] text-xs text-justify md:px-[50px] px-5 md:leading-[35px] leading-[20px] font-serif tracking-[3px] " ref={aboutref} >
               I am a {" "}
               <span className=" font-bold text-[#fffce1]"> Front End Web Developer</span>{" "}
               and dedicated to crafting engaging and intuitive digital
@@ -67,10 +90,10 @@ export const About = () => {
               project. Let's collaborate to bring your web development projects
               to fruition with precision and <span className=" font-bold text-[#fffce1]">creativity</span>.
             </p>
-            <div className=" md:flex hidden bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-900 opacity-70 md:h-1/2 md:w-[60%] w-[100%] h-1/2 absolute [clip-path:polygon(50%_50%,100%_0%,100%_100%,0%_50%,0%_100%)] md:bottom-[200px] bottom-10 right-0 z-0 blur-3xl"></div>
+            <div className=" md:flex hidden bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-900 opacity-70 md:h-1/2 md:w-[60%] w-[100%] h-1/2 absolute [clip-path:polygon(50%_50%,100%_0%,100%_100%,0%_50%,0%_100%)] md:bottom-[200px] bottom-10 right-0 z-0 blur-3xl" ref={aboutbox}></div>
             </div>
           </div>
-          <div ref={springref} className=" absolute md:w-20 w-5 md:right-0 right-7" >
+          <div ref={springref} className=" absolute md:w-20 w-5 md:left-10 left-64" >
             <img src={spring} alt="springlogo"  />
           </div>
         </div>
