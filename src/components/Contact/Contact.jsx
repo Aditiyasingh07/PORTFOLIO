@@ -3,11 +3,16 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import "../Skills/Skill.css";
+import "./contact.css"
 import contact from "/src/assets/contact.png"
 import insta from "/src/assets/icons/instagram.png"
 import git from "/src/assets/icons/github.png"
 import link from "/src/assets/icons/linkedin.png"
 import x from "/src/assets/icons/twitter.png"
+import u from "/src/assets/icons/u.svg"
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Contact = () => {
 
@@ -31,6 +36,21 @@ export const Contact = () => {
       yoyo: true,
      })
   }, [])
+
+
+  const shapeRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to(shapeRef.current, {
+      x: window.innerWidth - 200, // Moves the shape across the screen
+      scrollTrigger: {
+        trigger: shapeRef.current,
+        start: 'top center', // Start animation when the top of the shape hits the center of the viewport
+        end: 'bottom top', // End animation when the bottom of the shape reaches the top of the viewport
+        scrub: true, // Smoothly animate the shape as you scroll
+      }
+    });
+  }, []);
 
   return (
     <>

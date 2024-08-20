@@ -93,8 +93,8 @@ export const Skill = () => {
 
   return (
     <>
-      <section className=" md:h-screen h-screen w-full md:mt-20 mt-10 " ref={skillsRef}>
-        <h1 className=" md:text-5xl text-3xl font-pera text-center text-white font-extrabold">
+      <section className=" md:h-screen h-screen w-full md:mt-20 mt-0 " ref={skillsRef}>
+        <h1 className=" md:text-5xl text-3xl font-pera md:my-0 my-20 text-center text-white font-extrabold">
           Skills
         </h1>
         <div className=" md:h-full bg-[#070707] h-screen flex items-center">
@@ -107,7 +107,7 @@ export const Skill = () => {
             />
           </div>
           <div
-            className=" flex md:flex-row md:mt-0 mt-[200px] md:bg-transparent bg-[#070707] md:px-0 px-7 flex-col flex-wrap md:gap-5 gap-0 w-full justify-center"
+            className=" flex md:flex-row md:bg-transparent bg-[#070707] md:px-0 px-7 flex-col flex-wrap md:gap-5 gap-0 w-full justify-center"
           >
             <div className="md:w-1/3 w-full md:mb-0 mb-5 flex relative flex-col gap-y-2" 
             ref={skillone}
