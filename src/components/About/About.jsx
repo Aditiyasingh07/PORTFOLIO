@@ -76,7 +76,7 @@ export const About = () => {
                 src={ablogo}
                 alt="#about"
               />
-            <p className=" md:z-50 z-0 md:w-[60%] md:mb-0 mb-10 w-full md:mt-0 mt-4 md:text-[1.2rem] text-xs text-justify md:px-[50px] px-5 md:leading-[35px] leading-[20px] font-serif tracking-[3px] " ref={aboutref} >
+            <p className=" md:z-50 z-0 md:w-[60%] md:mb-0 mb-20 w-full md:mt-0 mt-4 md:text-[1.2rem] text-xs text-justify md:px-[50px] px-5 md:leading-[35px] leading-[20px] font-serif tracking-[3px] " ref={aboutref} >
               I am a {" "}
               <span className=" font-bold text-[#fffce1]"> Front End Web Developer</span>{" "}
               and dedicated to crafting engaging and intuitive digital

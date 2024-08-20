@@ -46,8 +46,8 @@ export const Project = () => {
         ref={pros}
       >
         <div className=" md:bg-[#b0b0b0] bg-transparent rounded-2xl md:w-[70%] w-[100%] h-full md:p-10 p-7 md:py-0 py-20 flex justify-center items-center">
-          <div className=" flex md:w-[85%] md:gap-5 gap-0 md:mt-[-60px] md:flex-wrap md:flex-row flex-col items-center justify-center ">
-          <p className=" md:hidden flex md:text-5xl text-3xl md:mt-0 mt-40 md:mb-0 mb-10 font-pera text-center text-[#FAF9F6] font-extrabold ">
+          <div className=" flex md:w-[85%] md:gap-5 gap-0 md:mt-[-60px] mt-[175px] md:flex-wrap md:flex-row flex-col items-center justify-center ">
+          <p className=" md:hidden flex md:text-5xl text-3xl font-pera text-center md:my-0 my-5 text-[#FAF9F6] font-extrabold ">
           Projects
         </p>
             <div
